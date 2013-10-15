@@ -23,18 +23,24 @@
 		<div class="vertical">
 			<div id="site-head-content" class="inner">
 			
+				<a class="js-ajax-link js-show-index" href="{{@blog.url}}">Menu</a>
+			
 				{{#if @blog.logo}}
 					<a id="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>
 				{{else}}
 					<h1 class="blog-title">{{@blog.title}}</h1>
 					<h2 class="blog-description">{{@blog.description}}</h2>
 				{{/if}}
+
 			</div>
 		</div>
 	</header>
 	
-	
-	{{{body}}}
+	<section id="wrapper">
+		<div id="ajax-container">
+			{{{body}}}
+		</div>
+	</section>
 	
 	<footer class="site-footer">
 		<div class="inner">
@@ -44,8 +50,9 @@
 	</footer>
 
 	{{ghost_foot}}
-	
 	<script type="text/javascript" src="/assets/js/libs/jquery.fitvids.js"></script>
+	<script type="text/javascript" src="/assets/js/libs/jquery.history.js"></script>
+	<script type="text/javascript" src="/assets/js/libs/nprogress.js"></script>
 	<script type="text/javascript" src="/assets/js/index.js"></script>
 
 </body>
