@@ -13,3 +13,15 @@
    ========================================================================== */
 
 @import url(normalize.css);
+
+
+
+
+
+#site-head {
+	background: #8fccc7 !important;
+}
+.inner {
+	width: 66.666%;
+	margin: 0 auto;	
+}
