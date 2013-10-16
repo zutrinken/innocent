@@ -296,6 +296,63 @@ img {
 #post-index .post {
 	border-bottom: 1px solid #e3e3e3;
 }
+.post-meta {
+	font-size: 0.75em;
+	color: #bfbfbf;
+}
+
+
+
+
+
+
+
+
+.post-navigation {}
+
+.pagination {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	margin: 3em auto;
+	font-size: 1em;
+	color: #fff;
+}
+
+.pagination a {
+	color: #fff;
+	margin: 0 2em;
+}
+
+.older-posts,
+.newer-posts {
+	position: absolute;
+	display: inline-block;
+	padding: 0 0.5em;
+	border: rgba(255,255,255,0.5) 0.125em solid;
+	text-decoration: none;
+	border-radius: 2em;
+	transition: border ease 0.3s;
+}
+
+.older-posts {
+	right: 0;
+	content: '>';
+}
+.page-number {
+	display: none;
+}
+.newer-posts {
+	left: 0;
+	content: '<';
+}
+.older-posts:hover,
+.newer-posts:hover {
+	border-color: #fff;
+}
+
+
 
 /* ==========================================================================
    x. Media Queries - Smaller than 900px
