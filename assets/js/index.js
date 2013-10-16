@@ -1,6 +1,30 @@
 jQuery(function($) {
 
 	/* ==========================================================================
+	   Exponential Widths
+	   ========================================================================== */
+	   
+		function exponential() {
+			var view = $(window).width();
+			var flubber = $('.inner');
+			
+			var shot = Math.sqrt(view);
+			shot = 100 - shot * view / 1000;
+
+			if(shot < 66.667) {
+				shot = 66.666;
+			} else if (shot > 89.999) {
+				shot = 90;
+			}
+			
+			flubber.css({
+				'width'	: shot + '%'
+			});
+		}
+		exponential();
+		$(window).resize(exponential);
+
+	/* ==========================================================================
 	   Fitvids by Chris Coyier
 	   ========================================================================== */
 
@@ -59,6 +83,7 @@ jQuery(function($) {
                 $ajaxContainer.fadeIn(500);
 
                 NProgress.done();
+                exponential();
 
                 loading = false;
                 showIndex = false;
