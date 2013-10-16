@@ -13,15 +13,38 @@
    ========================================================================== */
 
 @import url(normalize.css);
+@import url(nprogress.css);
 
 
-
+img {
+	max-width: 100%;
+	height: auto;
+}
 
 
 #site-head {
-	background: #8fccc7 !important;
+	background: #8fccc7;
 }
+
+#site-head-content {
+	text-align: center;
+}
+#blog-logo img {
+	display: block;
+	margin: 0 auto;
+	padding: 2em 0;
+	max-width: 20em;
+	max-height: 4em;
+}
+#blog-title {}
+#blog-description {}
+
+
 .inner {
 	width: 66.666%;
-	margin: 0 auto;	
+	margin: 0 auto;
+}
+#post-index .post {
+	border-bottom: 1px solid #e3e3e3;
+	padding: 4em 0;
 }

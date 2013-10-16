@@ -19,29 +19,29 @@
 
 <div id="post-index" class="container">
 
-<main class="content" role="main">
-
-	{{#foreach posts}}
-
-	<article class="{{post_class}}">
-		<div class="inner">
-			<header class="post-header">
-				<span class="post-meta"><time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time> {{#if tags}}on {{tags}}{{/if}}</span>
-				<h2 class="post-title"><a class="js-ajax-link" href="{{url}}">{{{title}}}</a></h2>
-			</header>
+	<main class="content" role="main">
 	
-			<section class="post-excerpt">
-				<p>{{excerpt}}&hellip;</p>
-			</section>
+		{{#foreach posts}}
+	
+		<article class="{{post_class}}">
+			<div class="inner">
+				<header class="post-header">
+					<span class="post-meta"><time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time> {{#if tags}}on {{tags}}{{/if}}</span>
+					<h2 class="post-title"><a class="js-ajax-link" href="{{url}}">{{{title}}}</a></h2>
+				</header>
+		
+				<section class="post-excerpt">
+					<p>{{excerpt}}&hellip;</p>
+				</section>
+			</div>
+		</article>
+	
+		{{/foreach}}
+	
+		<div class="post-navigation">
+			{{pagination}}
 		</div>
-	</article>
-
-	{{/foreach}}
-
-	<div class="post-navigation">
-		{{pagination}}
-	</div>
-
-</main>
+	
+	</main>
 
 </div>

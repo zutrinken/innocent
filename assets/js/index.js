@@ -90,16 +90,7 @@ jQuery(function($) {
                 History.pushState({}, title, url);
             } else {
                 // Swap in the latest post or post index as needed
-                if ($(this).hasClass('js-show-index')) {
-                    $('html, body').animate({'scrollTop': 0});
-
-                    NProgress.start();
-
-                    $latestPost.fadeOut(300, function() {
-                        $postIndex.fadeIn(300);
-                        NProgress.done();
-                    });
-                } else {
+                if (!$(this).hasClass('js-show-index')) {
                     $('html, body').animate({'scrollTop': 0});
 
                     NProgress.start();
