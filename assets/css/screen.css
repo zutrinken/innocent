@@ -282,9 +282,11 @@ img {
    ========================================================================== */
 
 #site-head {
+	position: relative;
     background: #8fccc7 no-repeat center center;
     background-size: cover;
 	text-align: center;
+	z-index: 30;
 }
 .cover {}
 #blog-logo img {
@@ -320,6 +322,7 @@ img {
 	position: relative;
 	background: #3b445e;
 	color: #aab4d0;
+	z-index: 20;
 }
 #site-footer a {
 	color: #f0efe9;
@@ -357,7 +360,9 @@ img {
    ========================================================================== */
 
 .post {
+	position: relative;
 	padding: 4em 0;
+	z-index: 10;
 }
 #post-index {
 	position: relative;
@@ -392,6 +397,7 @@ img {
 	margin: auto;
 	font-size: 1em;
 	color: #fff;
+	z-index: 40;
 }
 .older-posts,
 .newer-posts {

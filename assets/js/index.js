@@ -76,7 +76,8 @@ jQuery(function($) {
 
                 $ajaxContainer.html($newContent);
                 $ajaxContainer.fadeIn(500);
-
+				$('#site-footer').fadeIn(100);
+				
                 NProgress.done();
                 exponential();
                 $('#wrapper').fitVids();
@@ -105,7 +106,19 @@ jQuery(function($) {
                 if ($(this).hasClass('js-show-index') || $(this).parent('.pagination').length > 0) {
                     showIndex = true;
                 }
-
+                if ($(this).hasClass('post-link')) {
+					$('.post').animate({
+						'margin-top' : '-' + 5 + 'em',
+						'padding' : 0.5 + 'em 0',
+						'opacity' : '0'
+					}, 500);
+					$('#site-footer').fadeOut(100);
+				} else if($(this).hasClass('js-show-index')) {
+					$('.post').animate({
+						'margin-top' : '-' + 20 + 'em',
+						'opacity' : '0'
+					}, 500);
+				}
                 NProgress.start();
 
                 History.pushState({}, title, url);
