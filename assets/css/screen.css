@@ -12,18 +12,18 @@
    0. Includes - Ground zero
    ========================================================================== */
 
-@import url(normalize.css);
-@import url(nprogress.css);
+@import url('normalize.css');
+@import url('nprogress.css');
+@import url('font-awesome.min.css');
 
 
 
-html {
-    font-size: 62.5%;
-}
+html {}
 
 body {
-    font-size: 2.0rem;
-    line-height: 1.6em;
+	font-family: "Rambla", sans-serif;	
+	font-size: 1em;
+	line-height: 1.5em;
 }
 
 ::-moz-selection {
@@ -40,49 +40,45 @@ body {
 
 h1, h2, h3,
 h4, h5, h6 {
-    text-rendering: optimizeLegibility;
-    line-height: 1;
-    margin-top: 0;
-    font-family: 'Open Sans', sans-serif;
+	text-rendering: optimizeLegibility;
+	line-height: 1em;
+	margin-top: 0;
+	font-family: "ff-enzo-web", sans-serif;
 }
 
 h1 {
-    font-size: 5rem;
-    line-height: 1.2em;
-    letter-spacing: -2px;
-    text-indent: -3px;
+	font-size: 3em;
+	text-indent: -3px;
 }
 
 h2 {
-    font-size: 4rem;
-    line-height: 1.2em;
-    letter-spacing: -1px;
-    text-indent: -2px;
+	font-size: 2em;
+	text-indent: -2px;
 }
 
 h3 {
-    font-size: 3.5rem;
+	font-size: 1.5em;
 }
 
 h4 {
-    font-size: 3rem;
+	font-size: 1.375em;
 }
 
 h5 {
-    font-size: 2.5rem;
+	font-size: 1.25em;
 }
 
 h6 {
-    font-size: 2rem;
+	font-size: 1.125em;
 }
 
 a {
-    color: #4a4a4a;
-    transition: color ease 0.3s;
+	color: #4a4a4a;
+	transition: color ease 0.3s;
 }
 
 a:hover {
-    color: #57A3E8;
+	color: #57A3E8;
 }
 
 h1 a, h2 a, h3 a,
@@ -267,6 +263,11 @@ img {
 }
 
 
+.hidden {
+	display: none;
+}
+
+
 #site-head {
     background: #8fccc7 no-repeat center center;
     background-size: cover;
@@ -286,6 +287,12 @@ img {
 #blog-description {}
 
 
+
+#site-footer {
+	background: #404040;
+}
+
+
 .inner {
 	width: 66.666%;
 	margin: 0 auto;
@@ -300,12 +307,33 @@ img {
 	font-size: 0.75em;
 	color: #bfbfbf;
 }
+.post-title {
+	color: #000;
+}
+.post-title a {
+	text-decoration: none;
+}
 
-
-
-
-
-
+.share {}
+.share > a {
+	font-size: 2em;
+	display: block;
+	width: 1.5em;
+	height: 1.5em;
+	line-height: 1.5em;
+	text-align: center;
+	color: #fff;
+	padding: 0.125em;
+}
+.icon-twitter {
+	background-color: #3ea9dd;
+}
+.icon-facebook {
+	background-color: #3c5a98;
+}
+.icon-google-plus {
+	background-color: #d14836;
+}
 
 
 .post-navigation {}
@@ -315,41 +343,42 @@ img {
 	top: 0;
 	left: 0;
 	width: 100%;
-	margin: 3em auto;
+	margin: auto;
 	font-size: 1em;
 	color: #fff;
 }
 
 .pagination a {
-	color: #fff;
-	margin: 0 2em;
+	margin: 2em;
 }
 
 .older-posts,
 .newer-posts {
 	position: absolute;
 	display: inline-block;
-	padding: 0 0.5em;
-	border: rgba(255,255,255,0.5) 0.125em solid;
+	width: 3.333em;
+	height: 3.333em;
+	line-height: 3.333em;
+	text-align: center;
 	text-decoration: none;
-	border-radius: 2em;
-	transition: border ease 0.3s;
+	color: rgba(255,255,255,0.5);
+	border: rgba(255,255,255,0.5) 0.333em solid;
+	transition: all ease 0.3s;
 }
 
 .older-posts {
 	right: 0;
-	content: '>';
 }
 .page-number {
 	display: none;
 }
 .newer-posts {
 	left: 0;
-	content: '<';
 }
 .older-posts:hover,
 .newer-posts:hover {
-	border-color: #fff;
+	color: rgba(255,255,255,0.75);
+	border-color: rgba(255,255,255,0.75)
 }
 
 
