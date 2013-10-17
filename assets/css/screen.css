@@ -74,6 +74,7 @@ h6 {
 
 a {
 	color: #4a4a4a;
+	text-decoration: none;
 	transition: color ease 0.3s;
 }
 
@@ -289,13 +290,38 @@ img {
 
 
 #site-footer {
-	background: #404040;
+	position: relative;
+	background: #3b445e;
+	color: #aab4d0;
+}
+#site-footer a {
+	color: #f0efe9;
+	border: 0;
+}
+#site-footer a.subscribe {
+	position: absolute;
+	display: block;
+	width: 2em;
+	height: 2em;
+	line-height: 2em;
+	text-align: center;
+	margin-left: -1.125em;
+	left: 50%;
+	top: -1.125em;
+	color: #f80;
+	border: 0.125em solid #3b445e;
+	background: #fff;
+	border-radius: 2em;
+}
+.poweredby {
+	text-align: center;
+	padding: 2em;
 }
 
 
 .inner {
 	width: 62.5%;
-	max-width: 48em;
+	max-width: 32em;
 	margin: 0 auto;
 }
 .post {
@@ -305,7 +331,10 @@ img {
 	position: relative;
 }
 #post-index .post {
-	border-bottom: 1px solid #e3e3e3;
+	border-top: 1px solid #d8dfe5;
+}
+#post-index .post:first-child {
+	border-top: 0;
 }
 .post-meta {
 	font-size: 0.75em;
