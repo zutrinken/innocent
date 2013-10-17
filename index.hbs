@@ -1,22 +1,5 @@
 {{!< default}}
 
-
-<div id="latest-post" class="container">
-
-	<article class="{{post_class}}">
-		<header class="post-header">
-			<span class="post-meta"><time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time> {{#if tags}}on {{tags}}{{/if}}</span>
-			<h1 class="post-title">{{posts.0.title}}</h1>
-		</header>
-
-		<div class="post-content">
-			{{{posts.0.html}}}
-		</div>
-	</article>
-
-</div>
-
-
 <div id="post-index" class="container">
 
 	<main class="content" role="main">

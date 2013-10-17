@@ -39,17 +39,14 @@ jQuery(function($) {
     var loading = false;
     var showIndex = true;
     var $ajaxContainer = $('#ajax-container');
-    var $latestPost = $('#latest-post');
     var $postIndex = $('#post-index');
 
     // Initially hide the index and show the latest post
-    $latestPost.hide();
     $postIndex.show();
 
     // Show the index if the url has "page" in it (a simple
     // way of checking if we're on a paginated page.)
     if (window.location.pathname.indexOf('page') === 1) {
-        $latestPost.hide();
         $postIndex.show();
     }
 
@@ -70,13 +67,10 @@ jQuery(function($) {
             $('html, body').animate({'scrollTop': 0});
 
             $ajaxContainer.fadeOut(500, function() {
-                $latestPost = $newContent.filter('#latest-post');
                 $postIndex = $newContent.filter('#post-index');
 
                 if (showIndex === true) {
-                    $latestPost.hide();
                 } else {
-                    $latestPost.show();
                     $postIndex.hide();
                 }
 
@@ -112,6 +106,8 @@ jQuery(function($) {
                 }
 
                 NProgress.start();
+                
+                
 
                 History.pushState({}, title, url);
             } else {
@@ -122,7 +118,6 @@ jQuery(function($) {
                     NProgress.start();
 
                     $postIndex.fadeOut(300, function() {
-                        $latestPost.fadeIn(300);
                         NProgress.done();
                     });
                 }
