@@ -18,11 +18,13 @@
 
 
 
-html {}
+html {
+    font-size: 62.5%;
+}
 
 body {
 	font-family: "Rambla", sans-serif;	
-	font-size: 1em;
+	font-size: 2em;
 	line-height: 1.5em;
 }
 
@@ -47,15 +49,13 @@ h4, h5, h6 {
 }
 
 h1 {
-	font-size: 3em;
+	font-size: 2.5em;
 	text-indent: -3px;
 }
-
 h2 {
 	font-size: 2em;
 	text-indent: -2px;
 }
-
 h3 {
 	font-size: 1.5em;
 }
@@ -269,7 +269,7 @@ img {
 
 
 #site-head {
-    background: #8fccc7 no-repeat center center;
+    background: #8fccc7 no-repeat center center !important;
     background-size: cover;
 }
 
@@ -279,7 +279,7 @@ img {
 #blog-logo img {
 	display: block;
 	margin: 0 auto;
-	padding: 2em 0;
+	padding: 2em;
 	max-width: 20em;
 	max-height: 4em;
 }
@@ -294,11 +294,15 @@ img {
 
 
 .inner {
-	width: 66.666%;
+	width: 62.5%;
+	max-width: 48em;
 	margin: 0 auto;
 }
 .post {
 	padding: 4em 0;
+}
+#post-index {
+	position: relative;
 }
 #post-index .post {
 	border-bottom: 1px solid #e3e3e3;
@@ -314,9 +318,13 @@ img {
 	text-decoration: none;
 }
 
-.share {}
+.share {
+	float: right;
+	clear: right;
+	margin-top: 0.333em;
+}
 .share > a {
-	font-size: 2em;
+	font-size: 0.625em;
 	display: block;
 	width: 1.5em;
 	height: 1.5em;
@@ -324,6 +332,13 @@ img {
 	text-align: center;
 	color: #fff;
 	padding: 0.125em;
+	margin: 0 0.25em 0 0;
+	float: left;
+	border-radius: 2px;
+	transition: all ease 0.3s;
+}
+.share > a:hover {
+	background-color: #404040;
 }
 .icon-twitter {
 	background-color: #3ea9dd;

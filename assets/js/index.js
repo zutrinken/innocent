@@ -12,8 +12,8 @@ jQuery(function($) {
 			var shot = Math.sqrt(view);
 			shot = 100 - shot * view / 1000;
 
-			if(shot < 66.667) {
-				shot = 66.666;
+			if(shot < 62.51) {
+				shot = 62.5;
 			} else if (shot > 89.999) {
 				shot = 90;
 			}
@@ -79,6 +79,7 @@ jQuery(function($) {
 
                 NProgress.done();
                 exponential();
+                $('#wrapper').fitVids();
 
                 loading = false;
                 showIndex = false;
@@ -87,7 +88,7 @@ jQuery(function($) {
     });
 
     $('body').on('click', '.js-ajax-link, .pagination a', function(e) {
-        e.preventDefault();
+        e.preventDefault(); 
 
         if (loading === false) {
             var currentState = History.getState();
@@ -106,11 +107,10 @@ jQuery(function($) {
                 }
 
                 NProgress.start();
-                
-                
 
                 History.pushState({}, title, url);
             } else {
+            
                 // Swap in the latest post or post index as needed
                 if (!$(this).hasClass('js-show-index')) {
                     $('html, body').animate({'scrollTop': 0});

@@ -7,23 +7,7 @@
 			{{#post}}
 			<span class="post-meta"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time> {{#if tags}}on {{tags separator=" | "}}{{/if}}</span>
 			
-			<h1 class="post-title">{{{title}}}</h1>
-		
-			<section class="post-content">
-				{{content}}
-			</section>
-		
-			<footer class="post-footer">
-			
-			{{#if author}}
-			<section class="author">
-				<h4>{{author.name}}</h4>
-				<p>{{author.bio}}</p>
-			</section>
-			{{/if}}
-			
 			<section class="share">
-				<h4>Share this post</h4>
 					<a class="icon-twitter" href="http://twitter.com/share?text={{title}}&url={{url absolute="true"}}" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
 						<span class="hidden">Twitter</span>
 					</a>
@@ -36,6 +20,14 @@
                 <script id='fbg8hyu'>(function(i){var f,s=document.getElementById(i);f=document.createElement('iframe');f.src='//api.flattr.com/button/view/?uid=zutrinken&button=compact&url='+encodeURIComponent(document.URL);f.title='Flattr';f.height=20;f.width=110;f.style.borderWidth=0;s.parentNode.insertBefore(f,s);})('fbg8hyu');</script>
 				</section>
 			
+			<h1 class="post-title">{{{title}}}</h1>
+		
+			<section class="post-content">
+				{{content}}
+			</section>
+		
+			<footer class="post-footer">
+
 			</footer>
 			{{/post}}
 		
