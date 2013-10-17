@@ -22,8 +22,8 @@
 
 <body class="{{body_class}}">
 	
-	<header id="site-head" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
-		<div id="site-head-content" class="inner">
+	<header id="site-head"{{#if @blog.cover}} class="cover" style="background-image: url({{@blog.cover}})"{{/if}}>
+		<div class="inner">
 			{{#if @blog.logo}}
 				<a class="js-ajax-link js-show-index" id="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>
 			{{else}}

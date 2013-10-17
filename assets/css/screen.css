@@ -5,6 +5,13 @@
 /*
 
     0.  Includes
+    1.  Basics
+    2.  Default
+    3.  Index
+    4.  Pagination
+    5.  Post
+    6.  Media Query Tablet
+    7.  Media Query Phone
 
  */
 
@@ -16,7 +23,9 @@
 @import url('nprogress.css');
 @import url('font-awesome.min.css');
 
-
+/* ==========================================================================
+   1. Basics
+   ========================================================================== */
 
 html {
     font-size: 62.5%;
@@ -268,15 +277,16 @@ img {
 	display: none;
 }
 
+/* ==========================================================================
+   2. Default
+   ========================================================================== */
 
 #site-head {
-    background: #8fccc7 no-repeat center center !important;
+    background: #8fccc7 no-repeat center center;
     background-size: cover;
-}
-
-#site-head-content {
 	text-align: center;
 }
+.cover {}
 #blog-logo img {
 	display: block;
 	margin: 0 auto;
@@ -284,8 +294,25 @@ img {
 	max-width: 20em;
 	max-height: 4em;
 }
-#blog-title {}
-#blog-description {}
+.blog-title {
+	padding: 1em;
+	font-size: 2em;
+	line-height: 1em;
+}
+#blog-title {
+	display: inline-block;
+	height: 1.666em;
+	line-height: 1.666em;
+	font-size: 1em;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+	padding: 0 0.666em;
+	border: #fff 0.166em solid;
+}
+.blog-description {
+	display: none;
+}
 
 
 
@@ -324,6 +351,11 @@ img {
 	max-width: 32em;
 	margin: 0 auto;
 }
+
+/* ==========================================================================
+   3. Index
+   ========================================================================== */
+
 .post {
 	padding: 4em 0;
 }
@@ -346,6 +378,50 @@ img {
 .post-title a {
 	text-decoration: none;
 }
+
+/* ==========================================================================
+   4. Pagination
+   ========================================================================== */
+
+
+.pagination {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	margin: auto;
+	font-size: 1em;
+	color: #fff;
+}
+.older-posts,
+.newer-posts {
+	position: absolute;
+	display: inline-block;
+	width: 3.333em;
+	height: 3.333em;
+	line-height: 3.333em;
+	text-align: center;
+	text-decoration: none;
+	color: rgba(255,255,255,0.5);
+	border: rgba(255,255,255,0.5) 0.333em solid;
+	transition: all ease 0.3s;
+	margin: 2em;
+}
+.older-posts {
+	right: 0;
+}
+.newer-posts {
+	left: 0;
+}
+.older-posts:hover,
+.newer-posts:hover {
+	color: rgba(255,255,255,0.75);
+	border-color: rgba(255,255,255,0.75)
+}
+
+/* ==========================================================================
+   5. Post
+   ========================================================================== */
 
 .share {
 	float: right;
@@ -380,55 +456,10 @@ img {
 }
 
 
-.post-navigation {}
-
-.pagination {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	margin: auto;
-	font-size: 1em;
-	color: #fff;
-}
-
-.pagination a {
-	margin: 2em;
-}
-
-.older-posts,
-.newer-posts {
-	position: absolute;
-	display: inline-block;
-	width: 3.333em;
-	height: 3.333em;
-	line-height: 3.333em;
-	text-align: center;
-	text-decoration: none;
-	color: rgba(255,255,255,0.5);
-	border: rgba(255,255,255,0.5) 0.333em solid;
-	transition: all ease 0.3s;
-}
-
-.older-posts {
-	right: 0;
-}
-.page-number {
-	display: none;
-}
-.newer-posts {
-	left: 0;
-}
-.older-posts:hover,
-.newer-posts:hover {
-	color: rgba(255,255,255,0.75);
-	border-color: rgba(255,255,255,0.75)
-}
-
 
 
 /* ==========================================================================
-   x. Media Queries - Smaller than 900px
+   6. Media Queries - Smaller than 900px
    ========================================================================== */
 
 @media only screen and (max-width: 900px) {
@@ -440,7 +471,7 @@ img {
 }
 
 /* ==========================================================================
-   x. Media Queries - Smaller than 500px
+   7. Media Queries - Smaller than 500px
    ========================================================================== */
 
 
