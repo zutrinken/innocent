@@ -118,6 +118,7 @@ jQuery(function($) {
 						'margin-top' : '-' + 20 + 'em',
 						'opacity' : '0'
 					}, 500);
+					$('#site-footer').fadeOut(100);
 				}
                 NProgress.start();
 
