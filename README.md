@@ -2,6 +2,10 @@
 
 A theme for [Ghost](http://github.com/tryghost/ghost/).
 
+nprogress by [Rico Sta. Cruz](https://github.com/rstacruz/nprogress)
+FitVids by [Dave Rupert](https://github.com/davatron5000/FitVids.js)
+Font Awesome by [Dave Gandy](https://github.com/FortAwesome/Font-Awesome)
+
 ## Copyright & License
 
 Copyright (C) 2013 Peter Amende - Released under the MIT License.
