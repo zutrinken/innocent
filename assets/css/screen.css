@@ -272,7 +272,9 @@ img {
 	margin: auto;
 }
 
-
+.clear {
+	clear: both;
+}
 .hidden {
 	display: none;
 }
@@ -376,9 +378,14 @@ img {
 .post-meta {
 	font-size: 0.75em;
 	color: #bfbfbf;
+
+	float: left;
+	clear: left;
 }
 .post-title {
 	color: #000;
+	font-size: 2em;
+	text-indent: -2px;
 }
 .post-title a {
 	text-decoration: none;
@@ -429,12 +436,12 @@ img {
    5. Post
    ========================================================================== */
 
-.share {
+.post-share {
 	float: right;
 	clear: right;
 	margin-top: 0.333em;
 }
-.share > a {
+.post-share > a {
 	font-size: 0.625em;
 	display: block;
 	width: 1.5em;
@@ -448,7 +455,7 @@ img {
 	border-radius: 2px;
 	transition: all ease 0.3s;
 }
-.share > a:hover {
+.post-share > a:hover {
 	background-color: #404040;
 }
 .icon-twitter {
