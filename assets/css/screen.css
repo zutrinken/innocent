@@ -322,12 +322,12 @@ img {
 
 #site-footer {
 	position: relative;
-	background: #3b445e;
-	color: #aab4d0;
+	background: #3b4d5e;
+	color: #788da1;
 	z-index: 20;
 }
 #site-footer a {
-	color: #f0efe9;
+	color: #a6b3bf;
 	border: 0;
 }
 #site-footer a.subscribe {
@@ -341,7 +341,7 @@ img {
 	left: 50%;
 	top: -1.125em;
 	color: #f80;
-	border: 0.125em solid #3b445e;
+	border: 0.125em solid #3b4d5e;
 	background: #fff;
 	border-radius: 2em;
 }
