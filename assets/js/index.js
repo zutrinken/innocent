@@ -40,6 +40,7 @@ jQuery(function($) {
     var showIndex = true;
     var $ajaxContainer = $('#ajax-container');
     var $postIndex = $('#post-index');
+    var $blogLink = $('.js-show-index');
 
     // Initially hide the index and show the latest post
     $postIndex.show();
@@ -113,12 +114,16 @@ jQuery(function($) {
 						'opacity' : '0'
 					}, 500);
 					$('#site-footer').fadeOut(100);
+					$blogLink.addClass('single');
 				} else if($(this).hasClass('js-show-index')) {
-					$('.post').animate({
-						'margin-top' : '-' + 20 + 'em',
-						'opacity' : '0'
-					}, 500);
-					$('#site-footer').fadeOut(100);
+					if($(this).hasClass('single')) {
+						$('.post').animate({
+							'margin-top' : '-' + 20 + 'em',
+							'opacity' : '0'
+						}, 500);
+						$('#site-footer').fadeOut(100);
+					}
+					$blogLink.removeClass('single');
 				}
                 NProgress.start();
 
