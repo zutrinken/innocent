@@ -34,7 +34,7 @@ html {
 body {
 	font-family: "Rambla", sans-serif;	
 	font-size: 2em;
-	line-height: 1.5em;
+	line-height: 1.6em;
 }
 
 ::-moz-selection {
@@ -52,13 +52,13 @@ body {
 h1, h2, h3,
 h4, h5, h6 {
 	text-rendering: optimizeLegibility;
-	line-height: 1em;
-	margin-top: 0;
+	line-height: 1.2em;
+	margin: 1.6em 0;
 	font-family: "ff-enzo-web", sans-serif;
 }
 
 h1 {
-	font-size: 2.5em;
+	font-size: 2.4em;
 	text-indent: -3px;
 }
 h2 {
@@ -66,23 +66,23 @@ h2 {
 	text-indent: -2px;
 }
 h3 {
-	font-size: 1.5em;
+	font-size: 1.6em;
 }
 
 h4 {
-	font-size: 1.375em;
+	font-size: 1.2em;
 }
 
 h5 {
-	font-size: 1.25em;
+	font-size: 1.1em;
 }
 
 h6 {
-	font-size: 1.125em;
+	font-size: 1em;
 }
 
 a {
-	color: #4a4a4a;
+	color: #3b6ea1;
 	text-decoration: none;
 	transition: color ease 0.3s;
 }
@@ -98,7 +98,7 @@ h4 a, h5 a, h6 a {
 
 
 p, ul, ol {
-    margin: 1.6em 0;
+    margin: 2.4em 0;
 }
 
 ol ol, ul ul,
@@ -110,7 +110,7 @@ hr {
     display: block;
     height: 1px;
     border: 0;
-    border-top: 1px solid #efefef;
+    border-top: 1px solid #d8dfe5;
     margin: 3.2em 0;
     padding: 0;
 }
@@ -302,6 +302,7 @@ img {
 	padding: 1em;
 	font-size: 2em;
 	line-height: 1em;
+	margin: 0;
 }
 #blog-title {
 	display: inline-block;
@@ -312,6 +313,7 @@ img {
 	text-decoration: none;
 	color: #fff;
 	padding: 0 0.666em;
+	margin: 0;
 	border: #fff 0.166em solid;
 }
 .blog-description {
@@ -353,7 +355,6 @@ img {
 
 .inner {
 	width: 62.5%;
-	max-width: 32em;
 	margin: 0 auto;
 }
 
@@ -376,7 +377,8 @@ img {
 	border-top: 0;
 }
 .post-meta {
-	font-size: 0.75em;
+	font-size: 0.8em;
+	line-height: 1.6em;
 	color: #bfbfbf;
 
 	float: left;
@@ -386,6 +388,7 @@ img {
 	color: #000;
 	font-size: 2em;
 	text-indent: -2px;
+	margin: 0;
 }
 .post-title a {
 	text-decoration: none;
@@ -397,60 +400,58 @@ img {
 
 
 .pagination {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	margin: auto;
-	font-size: 1em;
-	color: #fff;
-	z-index: 40;
+	margin: 0;
+	padding: 4em 0;
+	border-top: 1px solid #d8dfe5;
 }
 .older-posts,
 .newer-posts {
-	position: absolute;
-	display: inline-block;
-	width: 3.333em;
-	height: 3.333em;
-	line-height: 3.333em;
+	display: block;
+	width: 2em;
+	height: 2em;
+	line-height: 2em;
 	text-align: center;
 	text-decoration: none;
-	color: rgba(255,255,255,0.5);
-	border: rgba(255,255,255,0.5) 0.333em solid;
+	color: #d8dfe5;
+	border: #d8dfe5 0.6em solid;
 	transition: all ease 0.3s;
-	margin: 2em;
 }
 .older-posts {
-	right: 0;
+	float: right;
 }
 .newer-posts {
-	left: 0;
+	float: left;
 }
 .older-posts:hover,
 .newer-posts:hover {
-	color: rgba(255,255,255,0.75);
-	border-color: rgba(255,255,255,0.75)
+	color: #3b4d5e;
+	border-color: #3b4d5e;
 }
 
 /* ==========================================================================
    5. Post
    ========================================================================== */
 
+.post-footer {
+	margin: 3.2em 0;
+	padding: 1.6em 0 1.2em;
+	border-top: 1px solid #efefef;
+	border-bottom: 1px solid #efefef;
+}
 .post-share {
 	float: right;
 	clear: right;
-	margin-top: 0.333em;
 }
 .post-share > a {
-	font-size: 0.625em;
+	font-size: 0.6em;
 	display: block;
-	width: 1.5em;
-	height: 1.5em;
-	line-height: 1.5em;
+	width: 1.6em;
+	height: 1.6em;
+	line-height: 1.6em;
 	text-align: center;
 	color: #fff;
-	padding: 0.125em;
-	margin: 0 0.25em 0 0;
+	padding: 0;
+	margin: 0 0.6em 0 0;
 	float: left;
 	border-radius: 2px;
 	transition: all ease 0.3s;
@@ -467,7 +468,10 @@ img {
 .icon-google-plus {
 	background-color: #d14836;
 }
-
+.post-share > iframe {
+	position: relative;
+	top: -0.16em;
+}
 
 
 

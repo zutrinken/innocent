@@ -12,8 +12,8 @@ jQuery(function($) {
 			var shot = Math.sqrt(view);
 			shot = 100 - shot * view / 1000;
 
-			if(shot < 62.51) {
-				shot = 62.5;
+			if(shot < 37.51) {
+				shot = 37.51;
 			} else if (shot > 89.999) {
 				shot = 90;
 			}
@@ -72,14 +72,13 @@ jQuery(function($) {
 
                 if (showIndex === true) {
                 } else {
-                    $postIndex.hide();
                 }
 
                 $ajaxContainer.html($newContent);
                 $ajaxContainer.fadeIn(500);
-				$('#site-footer').fadeIn(100);
 				
                 NProgress.done();
+				$('#site-footer').fadeIn(100);
                 exponential();
                 $('#wrapper').fitVids();
 

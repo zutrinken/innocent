@@ -13,10 +13,9 @@
 			<section class="post-content">
 				{{content}}
 			</section>
-		
+			
 			<footer class="post-footer">
 				<span class="post-meta"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time> {{#if tags}}on {{tags separator=" | "}}{{/if}}</span>
-			
 				<span class="post-share">
 						<a class="icon-twitter" href="http://twitter.com/share?text={{title}}&url={{url absolute="true"}}" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
 							<span class="hidden">Twitter</span>
@@ -31,6 +30,24 @@
 				</span>
 				<div class="clear"></div>
 			</footer>
+			
+			<aside class="post-comments">
+				<div id="disqus_thread"></div>
+				<script type="text/javascript">
+					/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+					var disqus_shortname = 'shithub'; // required: replace example with your forum shortname
+				
+					/* * * DON'T EDIT BELOW THIS LINE * * */
+					(function() {
+						var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+						dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+						(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+					})();
+				</script>
+				<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+			</aside>
+		
+
 			{{/post}}
 		
 		</article>

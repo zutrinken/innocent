@@ -1,8 +1,11 @@
 <nav class="pagination" role="pagination">
-    {{#if prev}}
-        <a class="newer-posts" href="{{pageUrl prev}}"><i class="icon-chevron-left"></i></a>
-    {{/if}}
-    {{#if next}}
-        <a class="older-posts" href="{{pageUrl next}}"><i class="icon-chevron-right"></i></a>
-    {{/if}}
+	<div class="inner">
+	    {{#if prev}}
+	        <a class="newer-posts" href="{{pageUrl prev}}"><i class="icon-chevron-left"></i></a>
+	    {{/if}}
+	    {{#if next}}
+	        <a class="older-posts" href="{{pageUrl next}}"><i class="icon-chevron-right"></i></a>
+	    {{/if}}
+	    <div class="clear"></div>
+	</div>
 </nav>
