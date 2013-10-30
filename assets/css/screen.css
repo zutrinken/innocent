@@ -91,7 +91,7 @@ a {
 }
 
 a:hover {
-	color: #57A3E8;
+	color: #4783bf;
 }
 
 h1 a, h2 a, h3 a,
@@ -173,12 +173,14 @@ mark {
 }
 
 code, tt {
-    padding: 1px 3px;
-    font-family: Inconsolata, monospace, sans-serif;
-    font-size: 0.85em;
+    padding: 2px 4px;
+    font-family: 'Inconsolata', monospace, sans-serif;
+    font-size: 0.8em;
     white-space: pre;
-    border: 1px solid #E3EDF3;
-    background: #F7FAFB;
+    border: 1px solid #292e33;
+    background: #303840;
+    color: #a7bf60;
+    vertical-align: top;
     border-radius: 2px;
 }
 
@@ -190,11 +192,12 @@ pre {
     width: 100%;
     padding: 16px;
     font-family: Inconsolata, monospace, sans-serif;
-    font-size: 0.7em;
+    font-size: 0.8em;
     white-space: pre;
     overflow: auto;
     background: #303840;
     color: #a7bf60;
+    border-radius: 2px;
 }
 
 pre code, tt {
@@ -204,6 +207,7 @@ pre code, tt {
     background: transparent;
     border: none;
     padding: 0;
+    vertical-align: inherit;
 }
 
 kbd {
@@ -322,20 +326,21 @@ img {
 }
 #blog-title {
 	display: inline-block;
-	height: 1.666em;
-	line-height: 1.666em;
+	line-height: 1.6em;
 	font-size: 1em;
 	text-align: center;
 	text-decoration: none;
 	color: #fff;
-	padding: 0 0.666em;
+	padding: 0 0.6em;
 	margin: 0;
 	border: #fff 0.166em solid;
 }
 .blog-description {
 	display: none;
 }
-
+#wrapper {
+	position: relative;
+}
 
 
 #site-footer {
@@ -343,7 +348,7 @@ img {
 	background: #3b4d5e;
 	color: #788da1;
 	z-index: 20;
-	font-size: 0.6em;
+	font-size: 0.8em;
 }
 #site-footer a {
 	color: #a6b3bf;

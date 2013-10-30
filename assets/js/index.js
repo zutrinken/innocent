@@ -108,22 +108,12 @@ jQuery(function($) {
                     showIndex = true;
                 }
                 if ($(this).hasClass('post-link')) {
-					$('.post').animate({
-						'margin-top' : '-' + 5 + 'em',
-						'padding' : 0.5 + 'em 0',
-						'opacity' : '0'
-					}, 500);
-					$('#site-footer').fadeOut(100);
 					$blogLink.addClass('single');
+
 				} else if($(this).hasClass('js-show-index')) {
-					if($(this).hasClass('single')) {
-						$('.post').animate({
-							'margin-top' : '-' + 20 + 'em',
-							'opacity' : '0'
-						}, 500);
-						$('#site-footer').fadeOut(100);
-					}
+					if($(this).hasClass('single')) {}
 					$blogLink.removeClass('single');
+
 				}
                 NProgress.start();
 
