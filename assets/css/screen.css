@@ -35,6 +35,8 @@ body {
 	font-family: "Rambla", sans-serif;	
 	font-size: 2em;
 	line-height: 1.6em;
+	
+	color: #2e3033;
 
 	-webkit-transition: all 0.5s ease-out;
 	transition: all 0.5s ease-out;
@@ -121,9 +123,9 @@ hr {
 blockquote {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    margin: 1.6em 0 1.6em -2.2em;
-    padding: 0 0 0 1.6em;
-    border-left: #4a4a4a 0.4em solid;
+    margin: 1.6em 0 1.6em -1.4em;
+    padding: 0 0 0 0.8em;
+    border-left: #c2c7cc 0.4em solid;
 }
 
 blockquote p {
@@ -131,20 +133,10 @@ blockquote p {
     font-style: italic;
 }
 
-blockquote small {
-    display: inline-block;
-    margin: 0.8em 0 0.8em 1.6em;;
-    font-size:0.9em;
-    color: #ccc;
+small {
+    font-size: 0.9em;
+    color: #45484d;
 }
-
-blockquote small:before { content: '\2014 \00A0'; }
-
-blockquote cite {
-    font-weight:bold;
-}
-
-blockquote cite a { font-weight: normal; }
 
 
 dl {
@@ -434,7 +426,7 @@ img {
 	border: #d8dfe5 0.2em solid;
 	transition: all ease 0.3s;
 	padding: 0.2em 0.6em;
-	transition: all ease 1s;
+	transition: all ease 0.3s;
 }
 .older-posts {
 	float: right;
