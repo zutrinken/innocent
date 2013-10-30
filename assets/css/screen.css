@@ -35,6 +35,9 @@ body {
 	font-family: "Rambla", sans-serif;	
 	font-size: 2em;
 	line-height: 1.6em;
+
+	-webkit-transition: all 0.5s ease-out;
+	transition: all 0.5s ease-out;
 }
 
 ::-moz-selection {
@@ -187,7 +190,7 @@ pre {
     width: 100%;
     padding: 16px;
     font-family: Inconsolata, monospace, sans-serif;
-    font-size: 0.9em;
+    font-size: 0.7em;
     white-space: pre;
     overflow: auto;
     background: #303840;
@@ -303,7 +306,6 @@ img {
     background: #8fccc7 no-repeat center center;
     background-size: cover;
     z-index: -1;
-    opacity: 0.333;
 }
 #blog-logo img {
 	display: block;
@@ -490,26 +492,36 @@ img {
 
 
 /* ==========================================================================
-   6. Media Queries - Smaller than 900px
+   6. Media Queries - Smaller than 640px
    ========================================================================== */
 
-@media only screen and (max-width: 900px) {
-/*
-	.inner {
-		width: 80%;
+@media only screen and (max-width: 640px) {
+	body {
+		font-size: 1.8em;
+		line-height: 1.6em;
 	}
-*/
 }
 
 /* ==========================================================================
-   7. Media Queries - Smaller than 500px
+   7. Media Queries - Smaller than 480px
    ========================================================================== */
 
 
-@media only screen and (max-width: 500px) {
-/*
-	.inner {
-		width: 90%;
+@media only screen and (max-width: 480px) {
+	body {
+		font-size: 1.6em;
+		line-height: 1.6em;
 	}
-*/
+}
+
+/* ==========================================================================
+   7. Media Queries - Smaller than 320px
+   ========================================================================== */
+
+
+@media only screen and (max-width: 320px) {
+	body {
+		font-size: 1.4em;
+		line-height: 1.6em;
+	}
 }
