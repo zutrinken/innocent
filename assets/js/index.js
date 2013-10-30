@@ -1,6 +1,5 @@
 jQuery(function($) {
 
-
 	/* ==========================================================================
 	   Exponential Widths
 	   ========================================================================== */
@@ -10,6 +9,7 @@ jQuery(function($) {
 			var flubber = $('.inner');
 			
 			var shot = Math.sqrt(view);
+			
 			shot = 100 - shot * view / 1000;
 
 			if(shot < 37.51) {
@@ -21,6 +21,7 @@ jQuery(function($) {
 			flubber.css({
 				'width'	: shot + '%'
 			});
+
 		}
 		exponential();
 		$(window).resize(exponential);
