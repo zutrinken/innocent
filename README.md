@@ -2,9 +2,16 @@
 
 A theme for [Ghost](http://github.com/tryghost/ghost/).
 
+Author: [Peter Amende](http://zutrinken.com/)
+License: MIT License
+
 nprogress by [Rico Sta. Cruz](https://github.com/rstacruz/nprogress)  
 FitVids by [Dave Rupert](https://github.com/davatron5000/FitVids.js)  
 Font Awesome by [Dave Gandy](https://github.com/FortAwesome/Font-Awesome)
+
+Feel free to support this project.
+
+[![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=zutrinken&url=https://github.com/zutrinken/innocent&title=innocent&language=js-css&tags=github&category=software)
 
 ## Copyright & License
 
