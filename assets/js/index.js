@@ -32,7 +32,7 @@ jQuery(function($) {
 	$('#wrapper').fitVids();
 
 	/* ==========================================================================
-	   Ajax Loading by Rory Gibson
+	   Ajax Loading based on Ghostwriter by Rory Gibson - https://github.com/roryg/ghostwriter
 	   ========================================================================== */
 
     var History = window.History;
