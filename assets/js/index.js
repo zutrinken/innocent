@@ -1,27 +1,26 @@
 jQuery(function($) {
 
 	/* ==========================================================================
-	   Exponential Widths
+	   Exponential Widths & Fonts
 	   ========================================================================== */
 	   
 		function exponential() {
 			var view = $(window).width();
-			var flubber = $('.inner');
-			
 			var shot = Math.sqrt(view);
-			
+			var type = shot / 10 - 0.5;
 			shot = 100 - shot * view / 1000;
-
 			if(shot < 37.51) {
-				shot = 37.51;
+				shot = 37.50;
 			} else if (shot > 89.999) {
 				shot = 90;
 			}
-			
-			flubber.css({
-				'width'	: shot + '%'
-			});
-
+			$('.inner').css('width', shot + '%');
+			if(type < 1.41) {
+				type = 1.4;
+			} else if (type > 1.999) {
+				type = 2;
+			}
+			$('body').css('font-size', type + 'em');
 		}
 		exponential();
 		$(window).resize(exponential);

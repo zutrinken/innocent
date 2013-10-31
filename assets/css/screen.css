@@ -37,9 +37,6 @@ body {
 	line-height: 1.6em;
 	
 	color: #2e3033;
-
-	-webkit-transition: all 0.5s ease-out;
-	transition: all 0.5s ease-out;
 }
 
 ::-moz-selection {
@@ -284,14 +281,14 @@ img {
 
 #site-head {
 	position: relative;
-    background: #8fccc7;
-    background-size: cover;
+    background-color: #292e33;
 	text-align: center;
 	z-index: 30;
+	padding: 2em 0;
 }
 
 #site-head.cover {
-	padding: 4em 0;
+	padding: 6em 0;
 }
 #site-cover {
 	position: absolute;
@@ -299,21 +296,31 @@ img {
 	height: 100%;
 	top: 0;
 	left: 0;
-    background: #8fccc7 no-repeat center center;
+    background: no-repeat center center;
     background-size: cover;
     z-index: -1;
 }
 #blog-logo img {
 	display: block;
 	margin: 0 auto;
-	padding: 2em;
+	padding: 1em;
 	max-width: 20em;
 	max-height: 4em;
 }
 .blog-title {
-	padding: 1em;
 	font-size: 2em;
 	line-height: 1em;
+	margin: 0;
+	padding: 0;
+}
+#blog-logo-title {
+	display: inline-block;
+	line-height: 1.6em;
+	font-size: 1em;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+	padding: 0;
 	margin: 0;
 }
 #blog-title {
@@ -327,9 +334,6 @@ img {
 	margin: 0;
 	border: #fff 0.166em solid;
 }
-.blog-description {
-	display: none;
-}
 #wrapper {
 	position: relative;
 }
@@ -337,13 +341,13 @@ img {
 
 #site-footer {
 	position: relative;
-	background: #3b4d5e;
-	color: #788da1;
+	background: #292e33;
+	color: #8a9199;
 	z-index: 20;
 	font-size: 0.8em;
 }
 #site-footer a {
-	color: #a6b3bf;
+	color: #c2c7cc;
 	border: 0;
 }
 #site-footer a.subscribe {
@@ -356,10 +360,17 @@ img {
 	margin-left: -1.125em;
 	left: 50%;
 	top: -1.125em;
-	color: #f80;
-	border: 0.125em solid #3b4d5e;
+	color: #c2c7cc;
+	border: 0.125em solid #292e33;
 	background: #fff;
 	border-radius: 2em;
+}
+.blog-description {
+	display: block;
+	text-align: center;
+	color: #fff;
+	padding: 2em 2em 0;
+	margin-bottom: -2em;
 }
 .poweredby {
 	text-align: center;
@@ -422,8 +433,8 @@ img {
 	display: block;
 	text-align: center;
 	text-decoration: none;
-	color: #d8dfe5;
-	border: #d8dfe5 0.2em solid;
+	color: #c2c7cc;
+	border: #c2c7cc 0.2em solid;
 	transition: all ease 0.3s;
 	padding: 0.2em 0.6em;
 	transition: all ease 0.3s;
@@ -435,8 +446,8 @@ img {
 	float: left;
 }
 .pagination a:hover {
-	color: #3b4d5e;
-	border-color: #3b4d5e;
+	color: #292e33;
+	border-color: #292e33;
 }
 .pagination a span {}
 .pagination a:hover span {}
@@ -493,10 +504,12 @@ img {
    ========================================================================== */
 
 @media only screen and (max-width: 640px) {
+/*
 	body {
 		font-size: 1.8em;
 		line-height: 1.6em;
 	}
+*/
 }
 
 /* ==========================================================================
@@ -505,10 +518,12 @@ img {
 
 
 @media only screen and (max-width: 480px) {
+/*
 	body {
 		font-size: 1.6em;
 		line-height: 1.6em;
 	}
+*/
 }
 
 /* ==========================================================================
@@ -517,8 +532,10 @@ img {
 
 
 @media only screen and (max-width: 320px) {
+/*
 	body {
 		font-size: 1.4em;
 		line-height: 1.6em;
 	}
+*/
 }
