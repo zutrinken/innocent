@@ -12,7 +12,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 	<link rel="stylesheet" type="text/css" href="/assets/css/screen.css" />
-	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Rambla:400,400italic,700" />
+	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Rambla:400,400italic,700|Inconsolata:400" />
+	
+	<script type="text/javascript" src="//use.typekit.net/jls1ooc.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
 	{{ghost_head}}
 </head>
@@ -52,8 +55,25 @@
 	{{ghost_foot}}
 	<script type="text/javascript" src="/assets/js/libs/jquery.fitvids.js"></script>
 	<script type="text/javascript" src="/assets/js/libs/jquery.history.js"></script>
+	<script type="text/javascript" src="/assets/js/libs/highlight.pack.js"></script>
 	<script type="text/javascript" src="/assets/js/libs/nprogress.js"></script>
 	<script type="text/javascript" src="/assets/js/index.js"></script>
+
+	<!-- Piwik -->
+	<script type="text/javascript">
+	  var _paq = _paq || [];
+	  _paq.push(["trackPageView"]);
+	  _paq.push(["enableLinkTracking"]);
+	
+	  (function() {
+	    var u=(("https:" == document.location.protocol) ? "https" : "http") + "://piwik.zutrinken.com/";
+	    _paq.push(["setTrackerUrl", u+"piwik.php"]);
+	    _paq.push(["setSiteId", "3"]);
+	    var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
+	    g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+	  })();
+	</script>
+	<!-- End Piwik Code -->
 
 </body>
 </html>

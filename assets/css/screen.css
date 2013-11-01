@@ -22,6 +22,7 @@
 @import url('normalize.css');
 @import url('nprogress.css');
 @import url('font-awesome.min.css');
+@import url('highlight.css');
 
 /* ==========================================================================
    1. Basics
@@ -55,6 +56,7 @@ h1, h2, h3, h4, h5, h6 {
 	text-rendering: optimizeLegibility;
 	line-height: 1.2em;
 	margin: 1.6em 0;
+	font-family: "ff-enzo-web", sans-serif;
 }
 
 h1 {
@@ -177,11 +179,11 @@ pre {
     border: 1px solid #292e33;
     width: 100%;
     padding: 16px;
-    font-family: Inconsolata, monospace, sans-serif;
+    font-family: 'Inconsolata', monospace, sans-serif;
     font-size: 0.8em;
     white-space: pre;
     overflow: auto;
-    background: #303840;
+    background: #2f3438;
     color: #a7bf60;
     border-radius: 2px;
 }
@@ -505,39 +507,18 @@ img {
    6. Media Queries - Smaller than 640px
    ========================================================================== */
 
-@media only screen and (max-width: 640px) {
-/*
-	body {
-		font-size: 1.8em;
-		line-height: 1.6em;
-	}
-*/
-}
+@media only screen and (max-width: 640px) {}
 
 /* ==========================================================================
    7. Media Queries - Smaller than 480px
    ========================================================================== */
 
 
-@media only screen and (max-width: 480px) {
-/*
-	body {
-		font-size: 1.6em;
-		line-height: 1.6em;
-	}
-*/
-}
+@media only screen and (max-width: 480px) {}
 
 /* ==========================================================================
    7. Media Queries - Smaller than 320px
    ========================================================================== */
 
 
-@media only screen and (max-width: 320px) {
-/*
-	body {
-		font-size: 1.4em;
-		line-height: 1.6em;
-	}
-*/
-}
+@media only screen and (max-width: 320px) {}

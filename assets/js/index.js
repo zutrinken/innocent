@@ -1,6 +1,17 @@
 jQuery(function($) {
 
 	/* ==========================================================================
+	   Run Highlight
+	   ========================================================================== */
+
+		function highlight() {
+			$('pre code').each(function(i, e) {
+				hljs.highlightBlock(e)
+			});
+		}
+		highlight();
+
+	/* ==========================================================================
 	   Exponential Widths & Fonts
 	   ========================================================================== */
 	   
@@ -29,7 +40,21 @@ jQuery(function($) {
 	   Fitvids by Chris Coyier
 	   ========================================================================== */
 
-	$('#wrapper').fitVids();
+		function video() {
+			$('#wrapper').fitVids();
+		}
+		video();
+		
+		
+	/* ==========================================================================
+	   Reload all scripts after AJAX load
+	   ========================================================================== */
+		
+		function reload() {
+			exponential();
+			highlight();
+			video();
+		}
 
 	/* ==========================================================================
 	   Ajax Loading based on Ghostwriter by Rory Gibson - https://github.com/roryg/ghostwriter
@@ -70,17 +95,11 @@ jQuery(function($) {
             $ajaxContainer.fadeOut(500, function() {
                 $postIndex = $newContent.filter('#post-index');
 
-                if (showIndex === true) {
-                } else {
-                }
-
                 $ajaxContainer.html($newContent);
                 $ajaxContainer.fadeIn(500);
 				
                 NProgress.done();
-				$('#site-footer').fadeIn(100);
-                exponential();
-                $('#wrapper').fitVids();
+                reload();
 
                 loading = false;
                 showIndex = false;
@@ -112,7 +131,6 @@ jQuery(function($) {
 				} else if($(this).hasClass('js-show-index')) {
 					if($(this).hasClass('single')) {}
 					$blogLink.removeClass('single');
-
 				}
                 NProgress.start();
 
