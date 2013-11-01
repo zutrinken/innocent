@@ -12,7 +12,7 @@ Innocent is a simple AJAX driven theme for [Ghost](http://github.com/tryghost/gh
 
 AJAX function based on Ghostwriter by [Rory Gibson](https://github.com/roryg/ghostwriter)  
 nprogress by [Rico Sta. Cruz](https://github.com/rstacruz/nprogress)  
-Highlight.js by [Ivan Sagalaev](https://github.com/isagalaev/highlight.js)
+Highlight.js by [Ivan Sagalaev](https://github.com/isagalaev/highlight.js)  
 FitVids by [Dave Rupert](https://github.com/davatron5000/FitVids.js)  
 Font Awesome by [Dave Gandy](https://github.com/FortAwesome/Font-Awesome)
 
