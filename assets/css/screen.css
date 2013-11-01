@@ -10,8 +10,6 @@
     3.  Index
     4.  Pagination
     5.  Post
-    6.  Media Query Tablet
-    7.  Media Query Phone
 
  */
 
@@ -161,7 +159,7 @@ mark {
 }
 
 code, tt {
-    padding: 2px 4px;
+    padding: 2px 6px;
     font-family: 'Inconsolata', monospace, sans-serif;
     font-size: 0.8em;
     white-space: pre;
@@ -180,7 +178,7 @@ pre {
     width: 100%;
     padding: 16px;
     font-family: 'Inconsolata', monospace, sans-serif;
-    font-size: 0.8em;
+    font-size: 0.9em;
     white-space: pre;
     overflow: auto;
     background: #2f3438;
@@ -517,7 +515,7 @@ img {
 @media only screen and (max-width: 480px) {}
 
 /* ==========================================================================
-   7. Media Queries - Smaller than 320px
+   8. Media Queries - Smaller than 320px
    ========================================================================== */
 
 
