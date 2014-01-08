@@ -37,6 +37,10 @@ body {
 	line-height: 1.6em;
 	
 	color: #2e3033;
+
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 ::-moz-selection {
@@ -333,6 +337,7 @@ img {
 }
 #wrapper {
 	position: relative;
+  flex: 1;
 }
 
 
