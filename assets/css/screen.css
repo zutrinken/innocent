@@ -43,13 +43,7 @@ body {
   flex-direction: column;
 }
 
-::-moz-selection {
-    color: #222;
-    background: #D6EDFF;
-    text-shadow: none;
-}
-
-::selection {
+::-moz-selection, ::selection {
     color: #222;
     background: #D6EDFF;
     text-shadow: none;
