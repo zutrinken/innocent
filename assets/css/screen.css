@@ -36,15 +36,13 @@ body {
 	line-height: 1.6em;
 	
 	color: #2e3033;
+
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
-::-moz-selection {
-    color: #222;
-    background: #D6EDFF;
-    text-shadow: none;
-}
-
-::selection {
+::-moz-selection, ::selection {
     color: #222;
     background: #D6EDFF;
     text-shadow: none;
@@ -249,11 +247,9 @@ table tbody > tr:nth-child(odd) > th {
     background-color: #f6f6f6;
 }
 
-table.plain {
-    tbody > tr:nth-child(odd) > td,
-    tbody > tr:nth-child(odd) > th {
-        background: transparent;
-    }
+table.plain tbody > tr:nth-child(odd) > td,
+table.plain tbody > tr:nth-child(odd) > th {
+    background: transparent;
 }
 
 
@@ -332,6 +328,7 @@ img {
 }
 #wrapper {
 	position: relative;
+  flex: 1;
 }
 
 
