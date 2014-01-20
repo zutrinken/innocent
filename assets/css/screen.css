@@ -26,6 +26,17 @@
    1. Basics
    ========================================================================== */
 
+@supports (flex-wrap: wrap) {
+    body {
+    	display: flex;
+		flex-direction: column;
+		min-height: 100vh;
+    }
+	#wrapper {
+		flex: 1;
+	}
+}
+
 html {
     font-size: 62.5%;
 }
@@ -36,10 +47,6 @@ body {
 	line-height: 1.6em;
 	
 	color: #2e3033;
-
-	display: flex;
-	min-height: 100vh;
-	flex-direction: column;
 }
 
 ::-moz-selection, ::selection {
@@ -326,7 +333,6 @@ img {
 }
 #wrapper {
 	position: relative;
-	flex: 1;
 }
 
 
@@ -492,7 +498,10 @@ img {
 	position: relative;
 	top: -0.16em;
 }
-
+.post-comments {
+	padding: 1.2em;
+	background-color: #efefef;
+}
 
 
 /* ==========================================================================
