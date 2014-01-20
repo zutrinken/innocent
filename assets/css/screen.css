@@ -37,9 +37,9 @@ body {
 	
 	color: #2e3033;
 
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
 }
 
 ::-moz-selection, ::selection {
@@ -204,9 +204,7 @@ kbd {
     font-weight: bold;
     background: #f4f4f4;
     border-radius: 4px;
-    box-shadow: 
-        0 1px 0 rgba(0, 0, 0, 0.2), 
-        0 1px 0 0 #fff inset;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 1px 0 0 #fff inset;
 }
 
 table {
@@ -328,7 +326,7 @@ img {
 }
 #wrapper {
 	position: relative;
-  flex: 1;
+	flex: 1;
 }
 
 
