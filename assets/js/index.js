@@ -90,10 +90,10 @@ jQuery(function($) {
         e.preventDefault(); 
         if (loading === false) {
             var currentState = History.getState();
-            var url = $(this).attr('href');
+            var url = $(this).prop('href');
             var title = $(this).attr('title') || null;
 
-            if (url !== currentState.url.replace(/\/$/, "")) {
+            if (url.replace(/\/$/, "") !== currentState.url.replace(/\/$/, "")) {
                 loading = true;
                 if ($(this).hasClass('post-link')) {
 					$blogLink.addClass('single');
