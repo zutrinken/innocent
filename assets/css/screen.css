@@ -473,6 +473,8 @@ img {
 .author > img {
     display: inline;
     float:left;
+    max-width: 110px;
+    max-height: 110px;
 }
 .author > .bio-margin {
     margin-left: 125px;
