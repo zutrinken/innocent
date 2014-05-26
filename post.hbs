@@ -14,7 +14,11 @@
 				{{content}}
 			</section>
 			
-			<footer class="post-footer">
+			<footer class="post-footer">			
+				<div class="post-meta">
+					<time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time>
+					{{#if tags}}on {{tags separator=" | "}}{{/if}}
+				</div>
 				<div class="post-share">
 					<a class="fa fa-twitter" href="https://twitter.com/share?text={{title}}&url={{url absolute="true"}}" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
 						<span class="hidden">Twitter</span>
@@ -26,31 +30,27 @@
 						<span class="hidden">Google+</span>
 					</a>
 				</div>
-
-				<div class="post-footer-title">Written by</div>
-
-				<section class="author">
-					{{#if user.image}}<img src="{{user.image}}"> {{/if}}
-
-					<div class="bio{{#if user.image}} bio-margin{{/if}}">
-						<h4>
-							{{#if author.website}}
-								<a href="{{author.website}}">{{author.name}}</a>
-							{{else}}
-								{{author.name}}
-							{{/if}}
-						</h4>
-						<p>{{{user.bio}}}</p>
-					</div>
-				</section>
-
-				<div class="post-meta">
-					<time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time>
-					{{#if tags}}on {{tags separator=" | "}}{{/if}}
-				</div>
-
 				<div class="clear"></div>
 			</footer>
+			
+			<aside class="post-author">
+				{{#if user.image}}
+					<figure class="post-author-avatar">
+						<img src="{{user.image}}" alt="{{author.name}}" />
+					</figure>
+				{{/if}}
+				<div class="post-author-bio">
+					<h4>
+						{{#if author.website}}
+							<a href="{{author.website}}">{{author.name}}</a>
+						{{else}}
+							{{author.name}}
+						{{/if}}
+					</h4>
+					<p>{{{user.bio}}}</p>
+				</div>
+				<div class="clear"></div>
+			</aside>
 			
 			<aside class="post-comments">
 			</aside>
