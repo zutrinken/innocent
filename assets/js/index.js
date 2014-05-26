@@ -59,7 +59,7 @@ jQuery(function($) {
 		
 		function ajaxLinkClass() { 
 			$('.post-tags a').addClass('js-tag-index js-ajax-link');
-			$('.pagination a').addClass('js-show-index js-ajax-link');
+			$('.pagination a').addClass('js-archive-index js-ajax-link');
 		}
 		ajaxLinkClass();
 		
@@ -119,12 +119,14 @@ jQuery(function($) {
 					body.addClass('post-template');
 					body.removeClass('home-template');
 					body.removeClass('tag-template');
+					body.removeClass('archive-template');
 
 				} else if($(this).hasClass('js-show-index')) {
 				
 					body.addClass('home-template');
 					body.removeClass('post-template');
 					body.removeClass('tag-template');
+					body.removeClass('archive-template');
 
 					var regex = /(\s)*(tag-.*?)(?=\s)/g;
 					body[0].className = body[0].className.replace(regex, '');
@@ -134,6 +136,14 @@ jQuery(function($) {
 					body.addClass('tag-template');
 					body.removeClass('post-template');
 					body.removeClass('home-template');
+					body.removeClass('archive-template');
+
+				} else if($(this).hasClass('js-archive-index')) {
+
+					body.addClass('archive-template');
+					body.removeClass('post-template');
+					body.removeClass('home-template');
+					body.removeClass('tag-template');
 
 				}
                 NProgress.start();
