@@ -459,9 +459,33 @@ img {
 
 .post-footer {
 	margin: 3.2em 0;
-	padding: 1.6em 0 1.2em;
+	padding: 0.5em 0;
 	border-top: 1px solid #efefef;
 	border-bottom: 1px solid #efefef;
+}
+.post-footer-title {
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.post-footer > .post-meta {
+    float: right;
+}
+.author > img {
+    display: inline;
+    float:left;
+    max-width: 110px;
+    max-height: 110px;
+}
+.author > .bio-margin {
+    margin-left: 125px;
+}
+.author > .bio p {
+    margin-top: 0.5em;
+    margin-bottom: 0;
+}
+.author > .bio h4 {
+    margin-top: 0.5em;
+    margin-bottom: 0;
 }
 .post-share {
 	float: right;
