@@ -1,5 +1,7 @@
 jQuery(function($) {
 
+	var body = $('body');
+
 	/* ==========================================================================
 	   Run Highlight
 	   ========================================================================== */
@@ -31,7 +33,7 @@ jQuery(function($) {
 			} else if (type > 1.999) {
 				type = 2;
 			}
-			$('body').css('font-size', type + 'em');
+			body.css('font-size', type + 'em');
 		}
 		exponential();
 		$(window).resize(exponential);
@@ -46,11 +48,18 @@ jQuery(function($) {
 		video();
 		
 		
+		function ajaxLinkClass() { 
+			$('.post-tags a').addClass('js-tag-index js-ajax-link');
+			$('.pagination a').addClass('js-show-index js-ajax-link');
+		}
+		ajaxLinkClass();
+		
 	/* ==========================================================================
 	   Reload all scripts after AJAX load
 	   ========================================================================== */
 		
 		function reload() {
+			ajaxLinkClass();
 			exponential();
 			highlight();
 			video();
@@ -63,7 +72,6 @@ jQuery(function($) {
     var History = window.History;
     var loading = false;
     var $ajaxContainer = $('#ajax-container');
-    var $blogLink = $('.js-show-index');
 
     if (!History.enabled) {
     	return false;
@@ -86,8 +94,8 @@ jQuery(function($) {
             });
         });
     });
-    $('body').on('click', '.js-ajax-link, .pagination a', function(e) {
-        e.preventDefault(); 
+    $('body').on('click', '.js-ajax-link', function(e) {
+        e.preventDefault();
         if (loading === false) {
             var currentState = History.getState();
             var url = $(this).attr('href');
@@ -95,12 +103,24 @@ jQuery(function($) {
 
             if (url !== currentState.url.replace(/\/$/, "")) {
                 loading = true;
-                if ($(this).hasClass('post-link')) {
-					$blogLink.addClass('single');
+                if ($(this).hasClass('js-show-post')) {
+                
+					body.addClass('post-template');
+					body.removeClass('home-template');
+					body.removeClass('tag-template');
 
 				} else if($(this).hasClass('js-show-index')) {
-					if($(this).hasClass('single')) {}
-					$blogLink.removeClass('single');
+				
+					body.addClass('home-template');
+					body.removeClass('post-template');
+					body.removeClass('tag-template');
+					
+				} else if($(this).hasClass('js-tag-index')) {
+
+					body.addClass('tag-template');
+					body.removeClass('post-template');
+					body.removeClass('home-template');
+					
 				}
                 NProgress.start();
 
