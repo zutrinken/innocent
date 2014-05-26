@@ -9,9 +9,9 @@
 		<article class="{{post_class}}">
 			<div class="inner">
 				<header class="post-header">
-					<span class="post-meta"><time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time> {{#if tags}}on {{tags}}{{/if}}</span>
+					<span class="post-meta"><time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time> {{#if tags}}<span class="post-tags">on {{tags separator=" | "}}</span>{{/if}}</span>
 					<div class="clear"></div>
-					<h2 class="post-title"><a class="js-ajax-link post-link" href="{{url}}">{{{title}}}</a></h2>
+					<h2 class="post-title"><a class="js-ajax-link js-show-post" href="{{url}}">{{{title}}}</a></h2>
 				</header>
 		
 				<section class="post-excerpt">

@@ -17,7 +17,7 @@
 			<footer class="post-footer">			
 				<div class="post-meta">
 					<time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time>
-					{{#if tags}}on {{tags separator=" | "}}{{/if}}
+					{{#if tags}}<span class="post-tags">on {{tags separator=" | "}}</span>{{/if}}
 				</div>
 				<div class="post-share">
 					<a class="fa fa-twitter" href="https://twitter.com/share?text={{title}}&url={{url absolute="true"}}" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
