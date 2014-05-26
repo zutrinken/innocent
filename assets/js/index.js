@@ -47,6 +47,15 @@ jQuery(function($) {
 		}
 		video();
 		
+	/* ==========================================================================
+	   Add class for ajax loading
+	   ========================================================================== */
+		
+		function ajaxLinkClass() { 
+			$('.post-tags a').addClass('js-tag-index js-ajax-link');
+			$('.pagination a').addClass('js-show-index js-ajax-link');
+		}
+		ajaxLinkClass();
 		
 		function ajaxLinkClass() { 
 			$('.post-tags a').addClass('js-tag-index js-ajax-link');
@@ -71,7 +80,7 @@ jQuery(function($) {
 
     var History = window.History;
     var loading = false;
-    var $ajaxContainer = $('#ajax-container');
+    var ajaxContainer = $('#ajax-container');
 
     if (!History.enabled) {
     	return false;
@@ -81,11 +90,13 @@ jQuery(function($) {
         $.get(State.url, function(result) {
             var $html = $(result);
             var $newContent = $('#ajax-container', $html).contents();
+            var title = result.match(/<title>(.*?)<\/title>/)[1];
 
             $('html, body').animate({'scrollTop': 0});
-            $ajaxContainer.fadeOut(500, function() {
-                $ajaxContainer.html($newContent);
-                $ajaxContainer.fadeIn(500);
+            ajaxContainer.fadeOut(500, function() {
+                document.title = title;
+                ajaxContainer.html($newContent);
+                ajaxContainer.fadeIn(500);
 				
                 NProgress.done();
                 reload();
@@ -95,13 +106,13 @@ jQuery(function($) {
         });
     });
     $('body').on('click', '.js-ajax-link', function(e) {
-        e.preventDefault();
+        e.preventDefault(); 
         if (loading === false) {
             var currentState = History.getState();
-            var url = $(this).attr('href');
+            var url = $(this).prop('href');
             var title = $(this).attr('title') || null;
 
-            if (url !== currentState.url.replace(/\/$/, "")) {
+            if (url.replace(/\/$/, "") !== currentState.url.replace(/\/$/, "")) {
                 loading = true;
                 if ($(this).hasClass('js-show-post')) {
                 
@@ -114,13 +125,16 @@ jQuery(function($) {
 					body.addClass('home-template');
 					body.removeClass('post-template');
 					body.removeClass('tag-template');
-					
+
+					var regex = /(\s)*(tag-.*?)(?=\s)/g;
+					body[0].className = body[0].className.replace(regex, '');
+
 				} else if($(this).hasClass('js-tag-index')) {
 
 					body.addClass('tag-template');
 					body.removeClass('post-template');
 					body.removeClass('home-template');
-					
+
 				}
                 NProgress.start();
 
