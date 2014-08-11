@@ -34,24 +34,31 @@
 				<div class="clear"></div>
 			</footer>
 			
+			{{#author}}
 			<aside class="post-author">
-				{{#if user.image}}
+				{{#if image}}
 					<figure class="post-author-avatar">
-						<img src="{{user.image}}" alt="{{author.name}}" />
+						<img src="{{image}}" alt="{{name}}" />
 					</figure>
 				{{/if}}
 				<div class="post-author-bio">
 					<h4>
-						{{#if author.website}}
-							<a href="{{author.website}}">{{author.name}}</a>
-						{{else}}
-							{{author.name}}
-						{{/if}}
+					{{#if website}}
+						<a href="{{website}}">{{name}}</a>
+					{{else}}
+						{{name}}
+					{{/if}}
+					{{#if location}}
+						<span>{{location}}</span>
+					{{/if}}
 					</h4>
-					<p>{{{user.bio}}}</p>
+					{{#if bio}}
+					<p>{{{bio}}}</p>
+					{{/if}}
 				</div>
 				<div class="clear"></div>
 			</aside>
+			{{/author}}
 			
 			<aside class="post-comments">
 				<div id="disqus_thread"></div>
