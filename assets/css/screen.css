@@ -527,6 +527,12 @@ img {
 .post-author-bio h4 {
 	margin: 0;
 }
+.post-author-bio h4 span {
+	font-weight: 400;
+	color: #bfbfbf;
+	font-size: 0.8em;
+	margin-left: 0.4em;
+}
 .post-author-bio p {
 	margin-top: 0;
 }
