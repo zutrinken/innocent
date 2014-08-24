@@ -53,13 +53,14 @@ jQuery(function($) {
 		
 		function ajaxLinkClass() { 
 			$('.post-tags a').addClass('js-tag-index js-ajax-link');
-			$('.pagination a').addClass('js-show-index js-ajax-link');
-		}
-		ajaxLinkClass();
-		
-		function ajaxLinkClass() { 
-			$('.post-tags a').addClass('js-tag-index js-ajax-link');
-			$('.pagination a').addClass('js-archive-index js-ajax-link');
+			$('.pagination a').each(function() {
+				/* Check if pagination url is home "/" */
+				if ($(this).attr('href').length < 2 ) {
+					$(this).addClass('js-show-index js-ajax-link');
+				} else {
+					$(this).addClass('js-archive-index js-ajax-link');
+				}				
+			});
 		}
 		ajaxLinkClass();
 		
@@ -115,36 +116,19 @@ jQuery(function($) {
             if (url.replace(/\/$/, "") !== currentState.url.replace(/\/$/, "")) {
                 loading = true;
                 if ($(this).hasClass('js-show-post')) {
-                
+                	body.removeClass();
 					body.addClass('post-template');
-					body.removeClass('home-template');
-					body.removeClass('tag-template');
-					body.removeClass('archive-template');
-
 				} else if($(this).hasClass('js-show-index')) {
-				
+                	body.removeClass();
 					body.addClass('home-template');
-					body.removeClass('post-template');
-					body.removeClass('tag-template');
-					body.removeClass('archive-template');
-
-					var regex = /(\s)*(tag-.*?)(?=\s)/g;
-					body[0].className = body[0].className.replace(regex, '');
-
 				} else if($(this).hasClass('js-tag-index')) {
-
+                	body.removeClass();
 					body.addClass('tag-template');
-					body.removeClass('post-template');
-					body.removeClass('home-template');
-					body.removeClass('archive-template');
-
+					var tag = $(this).attr('href').match(/\/tag\/([^\/]+)/)[1];
+					body.addClass('tag-' + tag);
 				} else if($(this).hasClass('js-archive-index')) {
-
+                	body.removeClass();
 					body.addClass('archive-template');
-					body.removeClass('post-template');
-					body.removeClass('home-template');
-					body.removeClass('tag-template');
-
 				}
                 NProgress.start();
 
