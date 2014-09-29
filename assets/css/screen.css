@@ -404,12 +404,10 @@ img {
 	border-top: 0;
 }
 .post-meta {
+	display: block;
 	font-size: 0.8em;
 	line-height: 1.6em;
 	color: #bfbfbf;
-
-	float: left;
-	clear: left;
 }
 .post-title {
 	color: #000;
@@ -471,7 +469,6 @@ img {
 }
 .post-share {
 	float: right;
-	clear: right;
 }
 .post-share > a {
 	font-size: 0.6em;
@@ -482,7 +479,7 @@ img {
 	text-align: center;
 	color: #fff;
 	padding: 0;
-	margin: 0 0.6em 0 0;
+	margin: 0.2em 0.6em 0 0;
 	float: left;
 	border-radius: 2px;
 	transition: all ease 0.3s;
