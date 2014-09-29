@@ -420,6 +420,9 @@ img {
 .post-title a {
 	text-decoration: none;
 }
+.post-image {
+	margin-top: 1.2em;
+}
 
 /* ==========================================================================
    4. Pagination

@@ -12,6 +12,11 @@
 					<span class="post-meta"><time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time> {{#if tags}}<span class="post-tags">on {{tags separator=" | "}}</span>{{/if}}</span>
 					<div class="clear"></div>
 					<h2 class="post-title"><a class="js-ajax-link js-show-post" href="{{url}}">{{{title}}}</a></h2>
+					{{#if image}}
+						<figure class="post-image">
+							<img src="{{image}}" alt="" />
+						</figure>
+					{{/if}}
 				</header>
 		
 				<section class="post-excerpt">
