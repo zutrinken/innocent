@@ -1,0 +1,28 @@
+{{!< default}}
+
+{{#author}}
+
+<header id="main-header"{{#if @blog.cover}} class="large"{{/if}}>
+	<nav id="main-nav">
+		<a class="js-ajax-link js-show-index" id="home-link" href="{{@blog.url}}"><i class="fa fa-angle-left"></i> Home</a>
+		<a class="subscribe" id="rss-link" href="{{@blog.url}}/author/{{name}}/rss/"><i class="fa fa-rss"></i> {{name}}</a>
+	</nav>
+	<div class="inner">
+		<h1 class="page-title">{{name}}</h1>
+	</div>
+	{{#if @blog.cover}}
+		<div class="site-cover" style="background-image: url({{@blog.cover}})"></div>
+	{{/if}}
+</header>
+
+{{/author}}
+
+<div id="post-index" class="container">
+
+	<main class="content" role="main">
+	
+		{{> "loop"}}
+	
+	</main>
+
+</div>

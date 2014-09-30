@@ -419,7 +419,10 @@ img {
 	display: block;
 	font-size: 0.8em;
 	line-height: 1.6em;
-	color: #bfbfbf;
+	color: #ccc;
+}
+.post-meta a {
+	color: #999;
 }
 .post-title {
 	color: #000;
