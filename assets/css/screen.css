@@ -419,10 +419,14 @@ img {
 	display: block;
 	font-size: 0.8em;
 	line-height: 1.6em;
-	color: #ccc;
+	color: #c2c7cc;
 }
 .post-meta a {
-	color: #999;
+	color: #8a9199;
+}
+.post-meta a:hover,
+.post-meta a:focus {
+	color: #292e33;
 }
 .post-title {
 	color: #000;
