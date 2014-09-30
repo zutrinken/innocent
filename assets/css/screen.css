@@ -371,24 +371,23 @@ img {
 #site-footer {
 	position: relative;
 	background: #292e33;
-	color: #8a9199;
+	color: #fff;
 	z-index: 20;
-	font-size: 0.8em;
 }
 #site-footer a {
-	color: #c2c7cc;
-	border: 0;
+	color: inherit;
+	font-weight: 700;
 }
 .blog-description {
 	display: block;
 	text-align: center;
 	color: #fff;
-	padding: 2em 2em 0;
-	margin-bottom: -2em;
+	margin: 32px 16px -16px;
 }
 .poweredby {
+	margin: 32px 16px;
 	text-align: center;
-	padding: 2em;
+	font-size: 0.8em;
 }
 
 
