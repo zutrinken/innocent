@@ -50,18 +50,15 @@
 					</figure>
 				{{/if}}
 				<div class="post-author-bio">
-					<h4>
-					{{#if website}}
-						<a href="{{website}}">{{name}}</a>
-					{{else}}
-						{{name}}
+					<h4><a href="{{url}}">{{name}}</a></h4>
+					{{#if bio}}
+						<p>{{{bio}}}</p>
 					{{/if}}
 					{{#if location}}
-						<span>{{location}}</span>
+						<span><i class="fa fa-map-marker"></i> {{location}}</span>
 					{{/if}}
-					</h4>
-					{{#if bio}}
-					<p>{{{bio}}}</p>
+					{{#if website}}
+						<span><i class="fa fa-link"></i> <a href="{{website}}">Website</a></span>
 					{{/if}}
 				</div>
 				<div class="clear"></div>
