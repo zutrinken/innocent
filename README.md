@@ -1,19 +1,12 @@
 # Innocent
 
-Innocent is a simple AJAX driven theme for [Ghost](http://github.com/tryghost/ghost/) by [Peter Amende](http://zutrinken.com/).
+Innocent is a simple AJAX driven theme for [Ghost](http://github.com/tryghost/ghost/) **v0.5.2** by [Peter Amende](http://zutrinken.com/). View a demo of Innocent on my blog [shithub.cc](http://shithub.cc/).
 
-[View a demo of Innocent](http://shithub.cc/)  
-**Feel free to support this project.**
+## Support
+
+Feel free to support this project.
 
 [![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=zutrinken&url=https://github.com/zutrinken/innocent&title=innocent&language=js-css&tags=github&category=software)
-
-## Credits
-
-AJAX function based on Ghostwriter by [Rory Gibson](https://github.com/roryg/ghostwriter)  
-nprogress by [Rico Sta. Cruz](https://github.com/rstacruz/nprogress)  
-Highlight.js by [Ivan Sagalaev](https://github.com/isagalaev/highlight.js)  
-FitVids by [Dave Rupert](https://github.com/davatron5000/FitVids.js)  
-Font Awesome by [Dave Gandy](https://github.com/FortAwesome/Font-Awesome)
 
 ## Copyright & License
 
