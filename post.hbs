@@ -1,11 +1,21 @@
 {{!< default}}
 
+{{#post}}
+
+<header id="main-header">
+	<nav id="main-nav">
+		<a class="js-ajax-link js-show-index" id="home-link" href="{{@blog.url}}"><i class="fa fa-angle-left"></i> Back</a>
+		<a class="subscribe" id="rss-link" href="{{@blog.url}}/rss/"><i class="fa fa-rss"></i> RSS</a>
+	</nav>
+	{{#if @blog.cover}}
+		<div class="site-cover" style="background-image: url({{@blog.cover}})"></div>
+	{{/if}}
+</header>
+
 <main class="content" role="main">
 	<div class="inner">
 		<article class="{{post_class}}">
-		
-			{{#post}}
-			
+
 			<header class="post-header">
 				<h1 class="post-title">{{{title}}}</h1>
 			</header>
@@ -16,8 +26,7 @@
 			
 			<footer class="post-footer">			
 				<div class="post-meta">
-					<time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time>
-					{{#if tags}}<span class="post-tags">on {{tags separator=" | "}}</span>{{/if}}
+					{{tags separator=", "}} | <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time>
 				</div>
 				<div class="post-share">
 					<a class="fa fa-twitter" href="https://twitter.com/share?text={{title}}&url={{url absolute="true"}}" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
@@ -42,18 +51,15 @@
 					</figure>
 				{{/if}}
 				<div class="post-author-bio">
-					<h4>
-					{{#if website}}
-						<a href="{{website}}">{{name}}</a>
-					{{else}}
-						{{name}}
+					<h4><a class="js-author-index js-ajax-link" href="{{url}}">{{name}}</a></h4>
+					{{#if bio}}
+						<p>{{{bio}}}</p>
 					{{/if}}
 					{{#if location}}
-						<span>{{location}}</span>
+						<span><i class="fa fa-map-marker"></i> {{location}}</span>
 					{{/if}}
-					</h4>
-					{{#if bio}}
-					<p>{{{bio}}}</p>
+					{{#if website}}
+						<span><i class="fa fa-link"></i> <a href="{{website}}">Website</a></span>
 					{{/if}}
 				</div>
 				<div class="clear"></div>

@@ -276,26 +276,55 @@ img {
    2. Default
    ========================================================================== */
 
-#site-head {
+#main-header {
 	position: relative;
     background-color: #292e33;
 	text-align: center;
 	z-index: 30;
-	padding: 2em 0;
+	padding: 32px 0;
+	min-height: 36px;
 }
 
-#site-head.cover {
-	padding: 6em 0;
+#main-header.large {
+	padding: 128px 0;
 }
-#site-cover {
+#main-nav {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 5;
+}
+#main-nav #home-link,
+#main-nav #rss-link {
+	font-size: 16px;
+	display: block;
+	color: #fff;
+	margin: 32px;
+	border: 2px solid #fff;
+	height: 32px;
+	line-height: 32px;
+	padding: 0 8px;
+}
+#main-nav #home-link {
+	float: left;
+}
+#main-nav #rss-link {
+	float: right;
+}
+.site-cover {
 	position: absolute;
 	width: 100%;
 	height: 100%;
 	top: 0;
 	left: 0;
-    background: no-repeat center center;
-    background-size: cover;
+    background: no-repeat scroll center center / cover;
     z-index: -1;
+    opacity: 0.8;
+}
+#blog-logo {
+	position: relative;
+	z-index: 10;
 }
 #blog-logo img {
 	display: block;
@@ -303,12 +332,6 @@ img {
 	padding: 1em;
 	max-width: 20em;
 	max-height: 4em;
-}
-.blog-title {
-	font-size: 2em;
-	line-height: 1em;
-	margin: 0;
-	padding: 0;
 }
 #blog-logo-title {
 	display: inline-block;
@@ -320,7 +343,16 @@ img {
 	padding: 0;
 	margin: 0;
 }
-#blog-title {
+.page-title {
+	position: relative;
+	font-size: 2em;
+	line-height: 1em;
+	margin: 0;
+	padding: 0;
+	color: #fff;
+	z-index: 10;
+}
+#page-title {
 	display: inline-block;
 	line-height: 1.6em;
 	font-size: 1em;
@@ -339,44 +371,23 @@ img {
 #site-footer {
 	position: relative;
 	background: #292e33;
-	color: #8a9199;
+	color: #fff;
 	z-index: 20;
-	font-size: 0.8em;
 }
 #site-footer a {
-	color: #c2c7cc;
-	border: 0;
-}
-#site-footer a.subscribe {
-	position: absolute;
-	display: block;
-	width: 2em;
-	height: 2em;
-	line-height: 2em;
-	text-align: center;
-	margin-left: -1.125em;
-	left: 50%;
-	top: -1.125em;
-	color: #c2c7cc;
-	border: 0.125em solid #292e33;
-	background: #fff;
-	border-radius: 2em;
-}
-#site-footer a.subscribe:hover,
-#site-footer a.subscribe:focus {
-	background: #c2c7cc;
-	color: #292e33;
+	color: inherit;
+	font-weight: 700;
 }
 .blog-description {
 	display: block;
 	text-align: center;
 	color: #fff;
-	padding: 2em 2em 0;
-	margin-bottom: -2em;
+	margin: 32px 16px -16px;
 }
 .poweredby {
+	margin: 32px 16px;
 	text-align: center;
-	padding: 2em;
+	font-size: 0.8em;
 }
 
 
@@ -407,7 +418,14 @@ img {
 	display: block;
 	font-size: 0.8em;
 	line-height: 1.6em;
-	color: #bfbfbf;
+	color: #c2c7cc;
+}
+.post-meta a {
+	color: #8a9199;
+}
+.post-meta a:hover,
+.post-meta a:focus {
+	color: #292e33;
 }
 .post-title {
 	color: #000;
@@ -507,7 +525,7 @@ img {
 	width: 15%;
 	min-width: 3.2em;
 	margin-left: 2.5%;
-	margin-top: -3.25%;
+	margin-top: -1.5%;
 	overflow: hidden;
 	-webkit-border-radius: 10em;
 	border-radius: 10em;
@@ -522,14 +540,21 @@ img {
 .post-author-bio h4 {
 	margin: 0;
 }
-.post-author-bio h4 span {
+.post-author-bio span {
 	font-weight: 400;
-	color: #bfbfbf;
+	color: #8a9199;
 	font-size: 0.8em;
-	margin-left: 0.4em;
+	line-height: 1em;
+	margin-right: 12px;
+}
+.post-author-bio span i {
+	color: #c2c7cc;
+}
+.post-author-bio span a {
+	color: inherit;
 }
 .post-author-bio p {
-	margin-top: 0;
+	margin: 0;
 }
 
 .post-comments {

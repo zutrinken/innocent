@@ -51,8 +51,15 @@ jQuery(function($) {
 	   Add class for ajax loading
 	   ========================================================================== */
 		
-		function ajaxLinkClass() { 
-			$('.post-tags a').addClass('js-tag-index js-ajax-link');
+		function ajaxLinkClass() {
+			$('.post-meta a').each(function() {
+				console.log('yay');
+				if ($(this).attr('href').indexOf('tag') > -1) {
+					$(this).addClass('js-tag-index js-ajax-link');
+				} else if ($(this).attr('href').indexOf('author') > -1) {
+					$(this).addClass('js-author-index js-ajax-link');
+				}
+			});
 			$('.pagination a').each(function() {
 				/* Check if pagination url is home "/" */
 				if ($(this).attr('href').length < 2 ) {
@@ -126,6 +133,11 @@ jQuery(function($) {
 					body.addClass('tag-template');
 					var tag = $(this).attr('href').match(/\/tag\/([^\/]+)/)[1];
 					body.addClass('tag-' + tag);
+				} else if($(this).hasClass('js-author-index')) {
+                	body.removeClass();
+					body.addClass('author-template');
+					var author = $(this).attr('href').match(/\/author\/([^\/]+)/)[1];
+					body.addClass('author-' + author);
 				} else if($(this).hasClass('js-archive-index')) {
                 	body.removeClass();
 					body.addClass('archive-template');
