@@ -2,15 +2,11 @@
 
 <header id="main-header"{{#if @blog.cover}} class="large"{{/if}}>
 	<nav id="main-nav">
-		<a class="subscribe" id="rss-link" href="{{@blog.url}}/rss/"><i class="fa fa-rss"></i> RSS</a>
+		<a class="js-ajax-link js-show-index" id="home-link" href="{{@blog.url}}"><i class="fa fa-angle-left"></i> Home</a>
+		<a class="subscribe" id="rss-link" href="{{@blog.url}}/tag/{{tag.slug}}/rss/"><i class="fa fa-rss"></i> {{tag.name}}</a>
 	</nav>
 	<div class="inner">
-		{{#if @blog.logo}}
-			<a class="js-ajax-link js-show-index" id="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>
-			<h1 class="page-title"><a class="js-ajax-link js-show-index" id="blog-logo-title" href="{{@blog.url}}">{{@blog.title}}</a></h1>
-		{{else}}
-			<h1 class="page-title"><a class="js-ajax-link js-show-index" id="page-title" href="{{@blog.url}}">{{@blog.title}}</a></h1>
-		{{/if}}
+		<h1 class="page-title">{{tag.name}}</h1>
 	</div>
 	{{#if @blog.cover}}
 		<div class="site-cover" style="background-image: url({{@blog.cover}})"></div>

@@ -276,26 +276,55 @@ img {
    2. Default
    ========================================================================== */
 
-#site-head {
+#main-header {
 	position: relative;
     background-color: #292e33;
 	text-align: center;
 	z-index: 30;
-	padding: 2em 0;
+	padding: 32px 0;
+	min-height: 36px;
 }
 
-#site-head.cover {
-	padding: 6em 0;
+#main-header.large {
+	padding: 128px 0;
 }
-#site-cover {
+#main-nav {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 5;
+}
+#main-nav #home-link,
+#main-nav #rss-link {
+	font-size: 16px;
+	display: block;
+	color: #fff;
+	margin: 32px;
+	border: 2px solid #fff;
+	height: 32px;
+	line-height: 32px;
+	padding: 0 8px;
+}
+#main-nav #home-link {
+	float: left;
+}
+#main-nav #rss-link {
+	float: right;
+}
+.site-cover {
 	position: absolute;
 	width: 100%;
 	height: 100%;
 	top: 0;
 	left: 0;
-    background: no-repeat center center;
-    background-size: cover;
+    background: no-repeat scroll center center / cover;
     z-index: -1;
+    opacity: 0.8;
+}
+#blog-logo {
+	position: relative;
+	z-index: 10;
 }
 #blog-logo img {
 	display: block;
@@ -303,12 +332,6 @@ img {
 	padding: 1em;
 	max-width: 20em;
 	max-height: 4em;
-}
-.blog-title {
-	font-size: 2em;
-	line-height: 1em;
-	margin: 0;
-	padding: 0;
 }
 #blog-logo-title {
 	display: inline-block;
@@ -320,7 +343,16 @@ img {
 	padding: 0;
 	margin: 0;
 }
-#blog-title {
+.page-title {
+	position: relative;
+	font-size: 2em;
+	line-height: 1em;
+	margin: 0;
+	padding: 0;
+	color: #fff;
+	z-index: 10;
+}
+#page-title {
 	display: inline-block;
 	line-height: 1.6em;
 	font-size: 1em;
@@ -346,26 +378,6 @@ img {
 #site-footer a {
 	color: #c2c7cc;
 	border: 0;
-}
-#site-footer a.subscribe {
-	position: absolute;
-	display: block;
-	width: 2em;
-	height: 2em;
-	line-height: 2em;
-	text-align: center;
-	margin-left: -1.125em;
-	left: 50%;
-	top: -1.125em;
-	color: #c2c7cc;
-	border: 0.125em solid #292e33;
-	background: #fff;
-	border-radius: 2em;
-}
-#site-footer a.subscribe:hover,
-#site-footer a.subscribe:focus {
-	background: #c2c7cc;
-	color: #292e33;
 }
 .blog-description {
 	display: block;

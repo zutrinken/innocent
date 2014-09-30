@@ -68,20 +68,6 @@
 
 <body class="{{body_class}}">
 	
-	<header id="site-head"{{#if @blog.cover}} class="cover"{{/if}}>
-		<div class="inner">
-			{{#if @blog.logo}}
-				<a class="js-ajax-link js-show-index" id="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>
-				<h1 class="blog-title"><a class="js-ajax-link js-show-index" id="blog-logo-title" href="{{@blog.url}}">{{@blog.title}}</a></h1>
-			{{else}}
-				<h1 class="blog-title"><a class="js-ajax-link js-show-index" id="blog-title" href="{{@blog.url}}">{{@blog.title}}</a></h1>
-			{{/if}}
-		</div>
-		{{#if @blog.cover}}
-			<div id="site-cover" style="background-image: url({{@blog.cover}})"></div>
-		{{/if}}
-	</header>
-	
 	<section id="wrapper">
 		<div id="ajax-container">
 			{{{body}}}
@@ -90,12 +76,14 @@
 	
 	<footer id="site-footer">
 		<div class="inner">
-			<a class="subscribe" href="{{@blog.url}}/rss/"><i class="fa fa-rss"></i></a>
 			{{#if @blog.description}}
 				<span class="blog-description">{{@blog.description}}</span>
 			{{/if}}
 			<section class="poweredby">Theme <a href="https://github.com/zutrinken/innocent">Innocent</a> by <a href="http://zutrinken.com" rel="nofollow">zutrinken</a>. Published with <a href="http://ghost.org">Ghost</a>.</section>
 		</div>
+		{{#if @blog.cover}}
+			<div class="site-cover" style="background-image: url({{@blog.cover}})"></div>
+		{{/if}}
 	</footer>
 
 	{{ghost_foot}}
