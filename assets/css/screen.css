@@ -453,6 +453,9 @@ img {
 	text-decoration: none;
 	color: inherit;
 }
+.post-image {
+	margin: auto;
+}
 .post-image img {
 	margin: 32px auto;
 }
