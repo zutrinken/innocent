@@ -300,9 +300,6 @@ img {
 }
 #main-nav a {
 	text-decoration: none;
-}
-#main-nav #home-link,
-#main-nav #rss-link {
 	font-size: 16px;
 	display: block;
 	color: #fff;
@@ -312,8 +309,8 @@ img {
 	line-height: 32px;
 	padding: 0 8px;
 }
-.post-template #main-nav #home-link,
-.post-template #main-nav #rss-link {
+.post-template #main-nav a,
+.post-template #main-nav a {
 	color: #292e33;
 	border-color: #292e33;
 }
@@ -403,8 +400,9 @@ img {
 
 
 .inner {
-	width: 62.5%;
+	max-width: 704px;
 	margin: 0 auto;
+	padding: 0 32px;
 }
 
 /* ==========================================================================
@@ -490,8 +488,8 @@ img {
    ========================================================================== */
 
 .post-footer {
-	margin: 3.2em 0;
-	padding: 0.5em 0;
+	margin: 64px 0;
+	padding: 16px 0;
 	border-top: 1px solid #efefef;
 	border-bottom: 1px solid #efefef;
 }
@@ -531,8 +529,8 @@ img {
 }
 .post-author {
 	clear: both;
-	margin: 2em 0;
-	padding: 2em 0;
+	margin: 56px 0;
+	padding: 8px 0;
 }
 .post-author-avatar {
 	float:left;
@@ -589,7 +587,34 @@ img {
    ========================================================================== */
 
 
-@media only screen and (max-width: 480px) {}
+@media only screen and (max-width: 480px) {
+	html {
+	    font-size: 50%;
+	}
+	.inner {
+		padding: 0 16px;
+	}
+	#main-nav a {
+		margin: 16px;
+	}
+	.post-footer {
+	}
+	.post-footer > .post-share,
+	.post-footer > .post-meta {
+	    float: none;
+	    font-size: 1.6em;
+	}
+	.post-footer > .post-share {
+		margin-top: 16px;
+	    font-size: 2em;
+	}
+	.post-footer > .post-meta {
+	    font-size: 1em;
+	}
+	.post-author {
+		font-size: 1.4em;
+	}
+}
 
 /* ==========================================================================
    8. Media Queries - Smaller than 320px
