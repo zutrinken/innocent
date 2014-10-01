@@ -53,7 +53,6 @@ jQuery(function($) {
 		
 		function ajaxLinkClass() {
 			$('.post-meta a').each(function() {
-				console.log('yay');
 				if ($(this).attr('href').indexOf('tag') > -1) {
 					$(this).addClass('js-tag-index js-ajax-link');
 				} else if ($(this).attr('href').indexOf('author') > -1) {
@@ -105,10 +104,8 @@ jQuery(function($) {
                 document.title = title;
                 ajaxContainer.html($newContent);
                 ajaxContainer.fadeIn(500);
-				
                 NProgress.done();
                 reload();
-
                 loading = false;
             });
         });
