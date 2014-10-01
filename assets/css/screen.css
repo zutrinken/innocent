@@ -46,7 +46,7 @@ body {
 	font-size: 2em;
 	line-height: 1.6em;
 	
-	color: #41454d;
+	color: #5c5f66;
 }
 
 ::-moz-selection, ::selection {
@@ -58,16 +58,20 @@ body {
 h1, h2, h3, h4, h5, h6 {
 	text-rendering: optimizeLegibility;
 	line-height: 1.2em;
-	margin: 1.6em 0;
+	margin: 32px 0;
+	color: #41454d;
+}
+h1, h2 {
+	margin: 48px 0;
 }
 
 h1 {
 	font-size: 2.4em;
-	text-indent: -3px;
+	text-indent: -2px;
 }
 h2 {
 	font-size: 2em;
-	text-indent: -2px;
+	text-indent: -1px;
 }
 h3 {
 	font-size: 1.6em;
@@ -94,11 +98,11 @@ a:focus {
 }
 
 p, ul, ol {
-    margin: 2.4em 0;
+    margin: 32px 0;
 }
 
 ol ol, ul ul, ul ol, ol ul {
-    margin: 0.4em 0;
+    margin: 8px 0;
 }
 
 hr {
@@ -106,20 +110,20 @@ hr {
     height: 1px;
     border: 0;
     border-top: 1px solid #d8dfe5;
-    margin: 3.2em 0;
+    margin: 32px 0;
     padding: 0;
 }
 
 blockquote {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    margin: 1.6em 0 1.6em -1.4em;
-    padding: 0 0 0 0.8em;
-    border-left: #c2c7cc 0.4em solid;
+    margin: 16px 0 16px -16px;
+    padding: 0 0 0 10px;
+    border-left: #c2c7cc 6px solid;
 }
 
 blockquote p {
-    margin: 0.8em 0;
+    margin: 16px 0;
     font-style: italic;
 }
 
@@ -130,7 +134,7 @@ small {
 
 
 dl {
-    margin: 1.6em 0;
+    margin: 32px 0;
 }
 
 dl dt {
@@ -142,12 +146,12 @@ dl dt {
     text-overflow: ellipsis;
     white-space: nowrap;
     font-weight: bold;
-    margin-bottom: 1em
+    margin-bottom: 12px;
 }
 
 dl dd {
     margin-left: 200px;
-    margin-bottom: 1em
+    margin-bottom: 12px;
 }
 
 mark {
@@ -169,7 +173,7 @@ code, tt {
 pre {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    margin: 1.6em 0;
+    margin: 64px 0;
     border: 1px solid #292e33;
     width: 100%;
     padding: 16px;
@@ -183,7 +187,8 @@ pre {
 }
 
 pre code, tt {
-    font-size: inherit;
+     font-size: 0.8em;
+     line-height: 1.6em;
     white-space: -moz-pre-wrap;
     white-space: pre-wrap;
     background: transparent;
@@ -209,7 +214,7 @@ kbd {
 table {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    margin: 1.6em 0;
+    margin: 32px 0;
     width:100%;
     max-width: 100%;
     background-color: transparent;
@@ -254,7 +259,7 @@ img {
 	display: block;
 	max-width: 100%;
 	height: auto;
-	margin: auto;
+	margin: 64px auto;
 }
 
 .clear {
@@ -411,7 +416,7 @@ img {
 
 .post {
 	position: relative;
-	padding: 4em 0;
+	padding: 64px 0;
 	z-index: 10;
 }
 #post-index {
@@ -428,6 +433,7 @@ img {
 	font-size: 0.8em;
 	line-height: 1.6em;
 	color: #c2c7cc;
+	margin-bottom: 8px;
 }
 .post-meta a {
 	color: #8a9199;
@@ -441,14 +447,17 @@ img {
 	color: #000;
 	font-size: 2em;
 	text-indent: -2px;
-	margin: 0;
+	margin: 0 0 24px;
 }
 .post-title a {
 	text-decoration: none;
 	color: inherit;
 }
-.post-image {
-	margin-top: 1.2em;
+.post-image img {
+	margin: 32px auto;
+}
+.post-excerpt p {
+	margin: auto;
 }
 
 /* ==========================================================================
@@ -494,7 +503,8 @@ img {
 	border-bottom: 1px solid #efefef;
 }
 .post-footer > .post-meta {
-    float: left;
+	float: left;
+	margin-bottom: 0;
 }
 .post-share {
 	float: right;
@@ -544,6 +554,7 @@ img {
 }
 .post-author-avatar img {
 	width: 100%;
+	margin: auto;
 }
 .post-author-bio {
 	padding-left: 20%;
@@ -593,6 +604,9 @@ img {
 	}
 	.inner {
 		padding: 0 16px;
+	}
+	.post-template #main-header {
+		padding: 16px 0;
 	}
 	#main-nav a {
 		margin: 16px;
