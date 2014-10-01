@@ -46,7 +46,7 @@ body {
 	font-size: 2em;
 	line-height: 1.6em;
 	
-	color: #2e3033;
+	color: #41454d;
 }
 
 ::-moz-selection, ::selection {
@@ -72,35 +72,26 @@ h2 {
 h3 {
 	font-size: 1.6em;
 }
-
 h4 {
 	font-size: 1.2em;
 }
-
 h5 {
 	font-size: 1.1em;
 }
-
 h6 {
 	font-size: 1em;
 }
 
 a {
-	color: #3b6ea1;
-	text-decoration: none;
-	-webkit-transition: all ease-out 0.5s;
-	transition: all ease-out 0.5s;
+	color: inherit;
+	text-decoration: underline;
+	-webkit-transition: all ease-out 0.25s;
+	transition: all ease-out 0.25s;
 }
-
 a:hover,
 a:focus {
-	color: #4783bf;
+	color: #000;
 }
-
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-    color: #50585D;
-}
-
 
 p, ul, ol {
     margin: 2.4em 0;
@@ -307,6 +298,9 @@ img {
 	width: 100%;
 	z-index: 5;
 }
+#main-nav a {
+	text-decoration: none;
+}
 #main-nav #home-link,
 #main-nav #rss-link {
 	font-size: 16px;
@@ -439,6 +433,7 @@ img {
 }
 .post-meta a {
 	color: #8a9199;
+	text-decoration: none;
 }
 .post-meta a:hover,
 .post-meta a:focus {
@@ -452,6 +447,7 @@ img {
 }
 .post-title a {
 	text-decoration: none;
+	color: inherit;
 }
 .post-image {
 	margin-top: 1.2em;
@@ -512,6 +508,7 @@ img {
 	height: 1.6em;
 	line-height: 1.6em;
 	text-align: center;
+	text-decoration: none;
 	color: #fff;
 	padding: 0;
 	margin: 0.2em 0.6em 0 0;
@@ -567,8 +564,9 @@ img {
 .post-author-bio span i {
 	color: #c2c7cc;
 }
-.post-author-bio span a {
+.post-author-bio a {
 	color: inherit;
+	text-decoration: none;
 }
 .post-author-bio p {
 	margin: 0;
