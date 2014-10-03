@@ -160,41 +160,37 @@ mark {
 
 code, tt {
     padding: 2px 6px;
+    margin: 0 4px;
     font-family: 'Inconsolata', monospace, sans-serif;
     font-size: 0.8em;
     white-space: pre;
-    border: 1px solid #292e33;
-    background: #303840;
-    color: #a7bf60;
+    border: 1px solid #efefef;
+    background: #f4f4f4;
     vertical-align: top;
-    border-radius: 2px;
 }
 
 pre {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     margin: 64px 0;
-    border: 1px solid #292e33;
+    border: 1px solid #efefef;
     width: 100%;
     padding: 16px;
     font-family: 'Inconsolata', monospace, sans-serif;
-    font-size: 0.9em;
     white-space: pre;
     overflow: auto;
-    background: #2f3438;
-    color: #a7bf60;
-    border-radius: 2px;
+    background: #f4f4f4;
 }
 
 pre code, tt {
-     font-size: 0.8em;
-     line-height: 1.6em;
-    white-space: -moz-pre-wrap;
-    white-space: pre-wrap;
-    background: transparent;
-    border: none;
-    padding: 0;
-    vertical-align: inherit;
+	font-size: 0.8em;
+	line-height: 1.6em;
+	white-space: -moz-pre-wrap;
+	white-space: pre-wrap;
+	background: transparent;
+	border: none;
+	padding: 0;
+	vertical-align: inherit;
 }
 
 kbd {
@@ -287,12 +283,15 @@ img {
 .post-template #main-header {
 	min-height: 36px;
 	padding: 32px 0;
+}
+.post-template:not(.page-template) #main-header {
 	background: #fff;
 }
 .nprogress-busy #main-header {
 	background: #fff;
 }
 .nprogress-busy .post-template #main-header {
+	min-height: 36px;
 	padding: 32px 0;
 	opacity: 0;
 }
@@ -313,9 +312,35 @@ img {
 	height: 32px;
 	line-height: 32px;
 	padding: 0 8px;
+	
+	-webkit-transition: none;
+	transition: none;
+
+	-webkit-animation: 1s ease 0s normal none 1 fadeIn;
+	animation: 1s ease 0s normal none 1 fadeIn;
 }
-.post-template #main-nav a,
-.post-template #main-nav a {
+@-webkit-keyframes fadeIn {
+	0% {
+		opacity: 0;
+		-webkit-transform: scale(0);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: scale(1);
+	}
+}
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+		transform: scale(0);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+.post-template:not(.page-template) #main-nav a,
+.post-template:not(.page-template) #main-nav a {
 	color: #292e33;
 	border-color: #292e33;
 }
@@ -365,6 +390,9 @@ img {
 	padding: 0;
 	color: #fff;
 	z-index: 10;
+
+	-webkit-animation: 1s ease 0s normal none 1 fadeUp;
+	animation: 1s ease 0s normal none 1 fadeUp;
 }
 #page-title {
 	display: inline-block;

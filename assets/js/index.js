@@ -28,18 +28,19 @@ jQuery(function($) {
 		
 		function ajaxLinkClass() {
 			$('.post-meta a').each(function() {
-				if ($(this).attr('href').indexOf('tag') > -1) {
-					$(this).addClass('js-tag-index js-ajax-link');
-				} else if ($(this).attr('href').indexOf('author') > -1) {
-					$(this).addClass('js-author-index js-ajax-link');
+				var link = $(this);
+				if (link.attr('href').indexOf('tag') > -1) {
+					link.addClass('js-tag-index js-ajax-link');
+				} else if (link.attr('href').indexOf('author') > -1) {
+					link.addClass('js-author-index js-ajax-link');
 				}
 			});
 			$('.pagination a').each(function() {
-				/* Check if pagination url is home "/" */
-				if ($(this).attr('href').length < 2 ) {
-					$(this).addClass('js-show-index js-ajax-link');
+				var link = $(this);
+				if (link.attr('href').length < 2 ) {
+					link.addClass('js-show-index js-ajax-link');
 				} else {
-					$(this).addClass('js-archive-index js-ajax-link');
+					link.addClass('js-archive-index js-ajax-link');
 				}				
 			});
 		}
@@ -73,7 +74,6 @@ jQuery(function($) {
             var $newContent = $('#ajax-container', $html).contents();
             var title = result.match(/<title>(.*?)<\/title>/)[1];
 
-            $('html, body').animate({'scrollTop': 0});
             ajaxContainer.fadeOut(500, function() {
                 document.title = title;
                 ajaxContainer.html($newContent);
@@ -93,23 +93,24 @@ jQuery(function($) {
 
             if (url.replace(/\/$/, "") !== currentState.url.replace(/\/$/, "")) {
                 loading = true;
-                if ($(this).hasClass('js-show-post')) {
+                var link = $(this);
+                if (link.hasClass('js-show-post')) {
                 	body.removeClass();
 					body.addClass('post-template');
-				} else if($(this).hasClass('js-show-index')) {
+				} else if(link.hasClass('js-show-index')) {
                 	body.removeClass();
 					body.addClass('home-template');
-				} else if($(this).hasClass('js-tag-index')) {
+				} else if(link.hasClass('js-tag-index')) {
                 	body.removeClass();
 					body.addClass('tag-template');
-					var tag = $(this).attr('href').match(/\/tag\/([^\/]+)/)[1];
+					var tag = link.attr('href').match(/\/tag\/([^\/]+)/)[1];
 					body.addClass('tag-' + tag);
-				} else if($(this).hasClass('js-author-index')) {
+				} else if(link.hasClass('js-author-index')) {
                 	body.removeClass();
 					body.addClass('author-template');
-					var author = $(this).attr('href').match(/\/author\/([^\/]+)/)[1];
+					var author = link.attr('href').match(/\/author\/([^\/]+)/)[1];
 					body.addClass('author-' + author);
-				} else if($(this).hasClass('js-archive-index')) {
+				} else if(link.hasClass('js-archive-index')) {
                 	body.removeClass();
 					body.addClass('archive-template');
 				}
