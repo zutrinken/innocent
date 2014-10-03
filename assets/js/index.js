@@ -73,7 +73,6 @@ jQuery(function($) {
             var $newContent = $('#ajax-container', $html).contents();
             var title = result.match(/<title>(.*?)<\/title>/)[1];
 
-            $('html, body').animate({'scrollTop': 0});
             ajaxContainer.fadeOut(500, function() {
                 document.title = title;
                 ajaxContainer.html($newContent);
