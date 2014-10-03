@@ -7,11 +7,11 @@ Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-lic
 pre code {
 	display: block;
 	padding: 0.5em;
-	color: #e3e3e3;
+	color: #66645c;
 }
 pre .title,
 pre .tag {
-	color: #ffcf85;
+	color: #403380;
 }
 pre .literal,
 pre .change,
@@ -21,10 +21,10 @@ pre .lisp .title,
 pre .clojure .built_in,
 pre .nginx .title,
 pre .tex .special {
-	color: #68d9f0;
+	color: #52b8cc;
 }
 pre .params {
-	color: #fd9720;
+	color: #e58a2e;
 }
 pre .constant {
 	color: #66d9ef;
@@ -41,20 +41,20 @@ pre .class .title {
 	color: #a6e22e;
 }
 pre .attribute {
-	color: #d58943;
+	color: #cc295f;
 }
 pre .symbol,
 pre .symbol .string,
 pre .value,
 pre .css .tag {
-	color: #80aac6;
+	color: #6b9bb3;
 }
 pre .keyword {
-	color: #c48944;
+	color: #0095b3;
 }
 pre .function .keyword,
 pre .css .keyword {
-	color: #be643a;	
+	color: #b34a36;
 }
 
 pre .tag .value,
@@ -81,7 +81,7 @@ pre .apache .tag,
 pre .apache .cbracket,
 pre .tex .command,
 pre .prompt {
-  color: #c3bc25;
+	color: #1717e5;
 }
 pre .comment,
 pre .javadoc,
@@ -94,16 +94,5 @@ pre .deletion,
 pre .shebang,
 pre .apache .sqbracket,
 pre .tex .formula {
-  color: #75715e;
-}
-pre .coffeescript .javascript,
-pre .javascript .xml,
-pre .tex .formula {
-  opacity: 0.5;
-}
-pre .xml .javascript,
-pre .xml .vbscript,
-pre .xml .css,
-pre .xml .cdata {
-  opacity: 0.5;
+	color: #75715e;
 }

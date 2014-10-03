@@ -160,41 +160,37 @@ mark {
 
 code, tt {
     padding: 2px 6px;
+    margin: 0 4px;
     font-family: 'Inconsolata', monospace, sans-serif;
     font-size: 0.8em;
     white-space: pre;
-    border: 1px solid #292e33;
-    background: #303840;
-    color: #a7bf60;
+    border: 1px solid #efefef;
+    background: #f4f4f4;
     vertical-align: top;
-    border-radius: 2px;
 }
 
 pre {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     margin: 64px 0;
-    border: 1px solid #292e33;
+    border: 1px solid #efefef;
     width: 100%;
     padding: 16px;
     font-family: 'Inconsolata', monospace, sans-serif;
-    font-size: 0.9em;
     white-space: pre;
     overflow: auto;
-    background: #2f3438;
-    color: #a7bf60;
-    border-radius: 2px;
+    background: #f4f4f4;
 }
 
 pre code, tt {
-     font-size: 0.8em;
-     line-height: 1.6em;
-    white-space: -moz-pre-wrap;
-    white-space: pre-wrap;
-    background: transparent;
-    border: none;
-    padding: 0;
-    vertical-align: inherit;
+	font-size: 0.8em;
+	line-height: 1.6em;
+	white-space: -moz-pre-wrap;
+	white-space: pre-wrap;
+	background: transparent;
+	border: none;
+	padding: 0;
+	vertical-align: inherit;
 }
 
 kbd {
