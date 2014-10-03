@@ -293,6 +293,7 @@ img {
 	background: #fff;
 }
 .nprogress-busy .post-template #main-header {
+	min-height: 36px;
 	padding: 32px 0;
 	opacity: 0;
 }

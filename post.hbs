@@ -10,10 +10,12 @@
 </header>
 
 <main class="content" role="main">
-	<div class="inner">
-		<article class="{{post_class}}">
+	<article class="{{post_class}}">
+		<div class="inner">
 
 			<header class="post-header">
+				<span class="post-meta">{{author}} {{tags prefix=" on " separator=", "}} | <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time></span>
+				<div class="clear"></div>
 				<h1 class="post-title">{{{title}}}</h1>
 			</header>
 		
@@ -66,8 +68,6 @@
 			</aside>
 
 			{{/post}}
-		
-		</article>
-	</div>
-
+		</div>
+	</article>
 </main>
