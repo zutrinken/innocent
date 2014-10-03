@@ -316,6 +316,32 @@ img {
 	height: 32px;
 	line-height: 32px;
 	padding: 0 8px;
+	
+	-webkit-transition: none;
+	transition: none;
+
+	-webkit-animation: 1s ease 0s normal none 1 fadeIn;
+	animation: 1s ease 0s normal none 1 fadeIn;
+}
+@-webkit-keyframes fadeIn {
+	0% {
+		opacity: 0;
+		-webkit-transform: scale(0);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: scale(1);
+	}
+}
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+		transform: scale(0);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
 }
 .post-template:not(.page-template) #main-nav a,
 .post-template:not(.page-template) #main-nav a {
@@ -368,6 +394,9 @@ img {
 	padding: 0;
 	color: #fff;
 	z-index: 10;
+
+	-webkit-animation: 1s ease 0s normal none 1 fadeUp;
+	animation: 1s ease 0s normal none 1 fadeUp;
 }
 #page-title {
 	display: inline-block;
