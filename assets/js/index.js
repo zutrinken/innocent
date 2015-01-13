@@ -97,6 +97,9 @@ jQuery(function($) {
                 if (link.hasClass('js-show-post')) {
                 	body.removeClass();
 					body.addClass('post-template');
+				} else if(link.hasClass('js-show-page')) {
+                	body.removeClass();
+					body.addClass('page-template').addClass('post-template');
 				} else if(link.hasClass('js-show-index')) {
                 	body.removeClass();
 					body.addClass('home-template');
