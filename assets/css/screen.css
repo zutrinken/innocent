@@ -283,8 +283,6 @@ img {
 .post-template #main-header {
 	min-height: 36px;
 	padding: 32px 0;
-}
-.post-template:not(.page-template) #main-header {
 	background: #fff;
 }
 .nprogress-busy #main-header {
@@ -339,8 +337,8 @@ img {
 		transform: scale(1);
 	}
 }
-.post-template:not(.page-template) #main-nav a,
-.post-template:not(.page-template) #main-nav a {
+.post-template #main-nav a,
+.post-template #main-nav a {
 	color: #292e33;
 	border-color: #292e33;
 }
