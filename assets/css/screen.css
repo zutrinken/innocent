@@ -456,6 +456,9 @@ img {
 #post-index .post:first-child {
 	border-top: 0;
 }
+#post-index .post.featured {
+	background: #f7f9fa;
+}
 .post-meta {
 	display: block;
 	font-size: 0.8em;
