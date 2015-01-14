@@ -57,35 +57,30 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
 	text-rendering: optimizeLegibility;
-	line-height: 1.5em;
-	margin: 32px 0;
 	color: #41454d;
 }
-h1, h2 {
-	margin: 2em 0;
-}
-
 h1 {
-	font-size: 2.4em;
-	text-indent: -2px;
+	font-size: 2em;
+	line-height: 1em;
+	text-indent: -1px;
+	margin: 60px 0 20px;
 }
 h2 {
-	font-size: 2em;
+	font-size: 1.75em;
+	line-height: 1.111em;
 	text-indent: -1px;
+	margin: 50px 0 20px;
 }
 h3 {
-	font-size: 1.6em;
+	font-size: 1.5em;
+	line-height: 1.333em;
+	margin: 40px 0 20px;
 }
 h4 {
-	font-size: 1.2em;
+	font-size: 1.25em;
+	line-height: 1.2em;
+	margin: 40px 0 20px;
 }
-h5 {
-	font-size: 1.1em;
-}
-h6 {
-	font-size: 1em;
-}
-
 a {
 	color: inherit;
 	text-decoration: underline;
@@ -98,7 +93,7 @@ a:focus {
 }
 
 p, ul, ol {
-    margin: 1em 0;
+    margin: 20px 0;
 }
 
 ol ol, ul ul, ul ol, ol ul {
@@ -117,14 +112,14 @@ hr {
 blockquote {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    margin: 16px 0 16px -16px;
-    padding: 0 0 0 10px;
+    margin: 1.5em auto;
+    padding: 0 0 0 20px;
     border-left: #c2c7cc 6px solid;
+    font-style: italic;
 }
 
 blockquote p {
-    margin: 16px 0;
-    font-style: italic;
+    margin: 10px 0;
 }
 
 small {
@@ -134,9 +129,8 @@ small {
 
 
 dl {
-    margin: 32px 0;
+    margin: 20px 0;
 }
-
 dl dt {
     float: left;
     width: 180px;
@@ -146,9 +140,8 @@ dl dt {
     text-overflow: ellipsis;
     white-space: nowrap;
     font-weight: bold;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
-
 dl dd {
     margin-left: 200px;
     margin-bottom: 12px;
@@ -157,12 +150,11 @@ dl dd {
 mark {
     background-color: #ffc336;
 }
-
 code, tt {
-    padding: 2px 6px;
-    margin: 0 4px;
+    padding: 4px 8px;
+    margin: 0 6px;
     font-family: 'Inconsolata', monospace, sans-serif;
-    font-size: 0.8em;
+    font-size: 0.75em;
     white-space: pre;
     border: 1px solid #efefef;
     background: #f4f4f4;
@@ -172,10 +164,10 @@ code, tt {
 pre {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    margin: 64px 0;
+    margin: 2em 0;
     border: 1px solid #efefef;
     width: 100%;
-    padding: 16px;
+    padding: 19px;
     font-family: 'Inconsolata', monospace, sans-serif;
     white-space: pre;
     overflow: auto;
@@ -183,8 +175,8 @@ pre {
 }
 
 pre code, tt {
-	font-size: 0.8em;
-	line-height: 1.6em;
+	font-size: 0.75em;
+	line-height: 2em;
 	white-space: -moz-pre-wrap;
 	white-space: pre-wrap;
 	background: transparent;
@@ -195,7 +187,7 @@ pre code, tt {
 
 kbd {
     display: inline-block;
-    margin-bottom: 0.4em;
+    margin-bottom: 0.5em;
     padding: 1px 8px;
     border: #ccc 1px solid;
     color: #666;
@@ -210,7 +202,7 @@ kbd {
 table {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    margin: 32px 0;
+    margin: 2em 0;
     width:100%;
     max-width: 100%;
     background-color: transparent;
@@ -218,7 +210,7 @@ table {
 
 table th,
 table td {
-    padding: 8px;
+    padding: 9px;
     line-height: 20px;
     text-align: left;
     vertical-align: top;
@@ -255,7 +247,7 @@ img {
 	display: block;
 	max-width: 100%;
 	height: auto;
-	margin: 64px auto;
+	margin: 2em auto;
 }
 
 .clear {
@@ -281,8 +273,8 @@ img {
 	transition: all cubic-bezier(0.23, 1, 0.32, 1) 0.666s;
 }
 .post-template #main-header {
-	min-height: 36px;
-	padding: 32px 0;
+	min-height: 40px;
+	padding: 20px 0;
 	background: #fff;
 }
 .nprogress-busy #main-header {
@@ -305,11 +297,11 @@ img {
 	font-size: 16px;
 	display: block;
 	color: #fff;
-	margin: 32px;
+	margin: 20px;
 	border: 2px solid #fff;
-	height: 32px;
-	line-height: 32px;
-	padding: 0 8px;
+	height: 36px;
+	line-height: 36px;
+	padding: 0 10px;
 	
 	-webkit-transition: none;
 	transition: none;
