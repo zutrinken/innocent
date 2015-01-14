@@ -57,12 +57,12 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
 	text-rendering: optimizeLegibility;
-	line-height: 1.2em;
+	line-height: 1.5em;
 	margin: 32px 0;
 	color: #41454d;
 }
 h1, h2 {
-	margin: 48px 0;
+	margin: 2em 0;
 }
 
 h1 {
@@ -98,11 +98,11 @@ a:focus {
 }
 
 p, ul, ol {
-    margin: 32px 0;
+    margin: 1em 0;
 }
 
 ol ol, ul ul, ul ol, ol ul {
-    margin: 8px 0;
+    margin: 0.5em 0;
 }
 
 hr {
@@ -409,7 +409,7 @@ img {
 #site-footer {
 	position: relative;
 	border-top: 1px solid #d8dfe5;
-	background: transparent;
+	background: #f7f9fa;
 	color: #8a9199;
 	z-index: 20;
 }
@@ -443,7 +443,7 @@ img {
 
 .post {
 	position: relative;
-	padding: 100px 0;
+	padding: 100px 0 120px;
 	z-index: 10;
 }
 #post-index {
@@ -531,8 +531,8 @@ img {
    ========================================================================== */
 
 .post-footer {
-	margin: 64px 0;
-	padding: 16px 0;
+	margin: 60px 0;
+	padding: 18px 0;
 	border-top: 1px solid #efefef;
 	border-bottom: 1px solid #efefef;
 }
@@ -544,16 +544,16 @@ img {
 	float: right;
 }
 .post-share > a {
-	font-size: 0.6em;
+	font-size: 0.75em;
 	display: block;
-	width: 1.6em;
-	height: 1.6em;
-	line-height: 1.6em;
+	width: 1.333em;
+	height: 1.333em;
+	line-height: 1.333em;
 	text-align: center;
 	text-decoration: none;
 	color: #fff;
 	padding: 0;
-	margin: 0.2em 0.6em 0 0;
+	margin: 0 0 0 0.666em;
 	float: left;
 	border-radius: 2px;
 	transition: all ease 0.3s;
@@ -573,18 +573,17 @@ img {
 }
 .post-author {
 	clear: both;
-	margin: 56px 0;
-	padding: 8px 0;
+	margin: 60px 0;
+	padding: 20px 0;
 }
 .post-author-avatar {
-	float:left;
-	width: 15%;
-	min-width: 3.2em;
-	margin-left: 2.5%;
-	margin-top: -1.5%;
+	float: left;
+	width: 12.5%;
+	min-width: 5em;
+	margin: -0.5em 0 0 1em;
 	overflow: hidden;
-	-webkit-border-radius: 10em;
 	border-radius: 10em;
+	-webkit-border-radius: 10em;
 }
 .post-author-avatar img {
 	width: 100%;
@@ -597,13 +596,13 @@ img {
 }
 .post-author-bio h4 {
 	margin: 0;
+    font-size: 1.333em;
+    line-height: 1em;
 }
 .post-author-bio span {
 	font-weight: 400;
 	color: #8a9199;
-	font-size: 0.75em;
-	line-height: 1.333em;
-	margin-right: 12px;
+	margin-right: 20px;
 }
 .post-author-bio span i {
 	color: #c2c7cc;
@@ -613,11 +612,11 @@ img {
 	text-decoration: none;
 }
 .post-author-bio p {
-	margin: 0;
+	margin: 0.666em 0;
 }
 
 .post-comments {
-	padding: 1.2em;
+	padding: 1em;
 	background-color: #efefef;
 }
 
