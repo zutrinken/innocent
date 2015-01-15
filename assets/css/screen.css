@@ -588,6 +588,11 @@ img {
 .fa-google-plus {
 	background-color: #d14836;
 }
+.post-share > iframe {
+	position: relative;
+	top: -1px;
+	margin-left: 0.5em;
+}
 .post-author {
 	clear: both;
 	margin: 60px 0;
