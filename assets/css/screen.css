@@ -550,6 +550,8 @@ img {
 	padding: 18px 0;
 	border-top: 1px solid #efefef;
 	border-bottom: 1px solid #efefef;
+	height: 1em;
+	overflow: hidden;
 }
 .post-footer > .post-meta {
 	float: left;
@@ -593,8 +595,7 @@ img {
 }
 .post-author-avatar {
 	float: left;
-	width: 12.5%;
-	min-width: 5em;
+	width: 15%;
 	margin: -0.5em 0 0 1em;
 	overflow: hidden;
 	border-radius: 10em;
@@ -629,7 +630,6 @@ img {
 .post-author-bio p {
 	margin: 0.666em 0;
 }
-
 .post-comments {
 	padding: 1em;
 	background-color: #efefef;
@@ -661,21 +661,20 @@ img {
 		margin: 16px;
 	}
 	.post-footer {
+		height: auto;
 	}
 	.post-footer > .post-share,
 	.post-footer > .post-meta {
 	    float: none;
-	    font-size: 1.6em;
-	}
-	.post-footer > .post-share {
-		margin-top: 16px;
-	    font-size: 2em;
-	}
-	.post-footer > .post-meta {
 	    font-size: 1em;
 	}
-	.post-author {
-		font-size: 1.4em;
+	.post-footer > .post-share > * {
+		margin: 1em 1em 1em 0;
+	    font-size: 1em;
+	    top: auto;
+	}
+	.post-author-avatar {
+		margin: -0.25em 0 0 0.5em;
 	}
 }
 
