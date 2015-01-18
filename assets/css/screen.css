@@ -52,34 +52,6 @@ body {
     background: #D6EDFF;
     text-shadow: none;
 }
-
-h1, h2, h3, h4, h5, h6 {
-	font: 400 2em / 1.5em 'Abril Fatface', serif;
-	text-rendering: optimizeLegibility;
-	color: #212226;
-}
-h1 {
-	font-size: 2em;
-	line-height: 1em;
-	text-indent: -1px;
-	margin: 60px 0 20px;
-}
-h2 {
-	font-size: 1.75em;
-	line-height: 1.111em;
-	text-indent: -1px;
-	margin: 50px 0 20px;
-}
-h3 {
-	font-size: 1.5em;
-	line-height: 1.333em;
-	margin: 40px 0 20px;
-}
-h4 {
-	font-size: 1.25em;
-	line-height: 1.2em;
-	margin: 40px 0 20px;
-}
 a {
 	color: #212226;
 	text-decoration: none;
@@ -95,8 +67,45 @@ a:focus {
 	border-bottom: 1px solid #d8dfe5;
 }
 
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Open Sans', sans-serif;
+	text-rendering: optimizeLegibility;
+	color: #212226;
+	font-weight: 800;
+}
+
+h1 {
+	font-size: 2em;
+	line-height: 1em;
+	text-indent: -1px;
+	margin: 60px 0 20px;
+}
+
+h2 {
+	font-size: 1.75em;
+	line-height: 1.111em;
+	text-indent: -1px;
+	margin: 50px 0 20px;
+}
+
+h3 {
+	font-size: 1.5em;
+	line-height: 1.333em;
+	margin: 40px 0 20px;
+}
+
+h4 {
+	font-size: 1.25em;
+	line-height: 1.2em;
+	margin: 40px 0 20px;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+	font-weight: inherit;
+}
+
 p, ul, ol {
-    margin: 20px 0;
+    margin: 20px auto;
 }
 
 ol ol, ul ul, ul ol, ol ul {
@@ -115,14 +124,12 @@ hr {
 blockquote {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    margin: 1.5em auto;
+    margin: 40px auto;
     padding: 0 0 0 20px;
-    border-left: #c2c7cc 6px solid;
+    border-left: #d8dfe5 5px solid;
     font-style: italic;
-}
-
-blockquote p {
-    margin: 10px 0;
+    font-weight: 400;
+    color: #8a9199;
 }
 
 small {
@@ -154,27 +161,31 @@ mark {
     background-color: #ffc336;
 }
 code, tt {
-    padding: 4px 8px;
-    margin: 0 6px;
-    font-family: 'Inconsolata', monospace, sans-serif;
-    font-size: 0.75em;
-    white-space: pre;
-    border: 1px solid #efefef;
-    background: #f4f4f4;
-    vertical-align: top;
+	padding: 4px 8px;
+	margin: 0 6px;
+	font-family: 'Inconsolata', monospace, sans-serif;
+	font-size: 0.75em;
+	white-space: pre;
+	border: 1px solid #d8dfe5;
+	background: #f7f9fa;
+	vertical-align: top;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
 }
 
 pre {
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    margin: 2em 0;
-    border: 1px solid #efefef;
-    width: 100%;
-    padding: 19px;
-    font-family: 'Inconsolata', monospace, sans-serif;
-    white-space: pre;
-    overflow: auto;
-    background: #f4f4f4;
+	margin: 40px auto;
+	border: 1px solid #d8dfe5;
+	width: 100%;
+	padding: 19px;
+	font-family: 'Inconsolata', monospace, sans-serif;
+	white-space: pre;
+	overflow: auto;
+	background: #f7f9fa;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
 }
 
 pre code, tt {
@@ -250,7 +261,7 @@ img {
 	display: block;
 	max-width: 100%;
 	height: auto;
-	margin: 2em auto;
+	margin: 40px auto;
 }
 
 .clear {
@@ -294,7 +305,7 @@ img {
 	left: 0;
 	width: 100%;
 	z-index: 5;
-	font-family: 'Open Sans', serif;
+	font-family: 'Open Sans', sans-serif;
 }
 #main-nav > span {
 	display: block;
@@ -343,7 +354,7 @@ img {
 	-webkit-transition: all ease 0.3s;
 }
 .post-template #main-nav a {
-	color: #c2c7cc;
+	color: #8a9199;
 	border-color: #c2c7cc;
 }
 .post-template #main-nav a:hover,
@@ -374,7 +385,7 @@ img {
 }
 .page-title,
 #blog-name {
-	font-family: 'Open Sans', serif;
+	font-family: 'Open Sans', sans-serif;
 	font-weight: 700;
 	letter-spacing: -1px;
 	display: inline-block;
@@ -502,7 +513,8 @@ img {
 	font-size: 0.75em;
 	line-height: 1.333em;
 	color: #c2c7cc;
-	font-family: 'Open Sans', serif;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
 }
 .post-meta a {
 	color: #8a9199;
@@ -515,12 +527,14 @@ img {
 .post-title {
 	color: #000;
 	font-size: 2em;
+	font-weight: 800;
 	text-indent: -1px;
 	margin: 0.25em 0 0.75em;
 }
 .post-title a {
 	text-decoration: none;
 	color: inherit;
+	font-weight: inherit;
 }
 .post-excerpt p {
 	margin: auto;
@@ -535,7 +549,7 @@ img {
 	margin: 0;
 	padding: 40px 0;
 	position: relative;
-	font-family: 'Open Sans', serif;
+	font-family: 'Open Sans', sans-serif;
 }
 .pagination:after {
 	content: '';
@@ -550,7 +564,7 @@ img {
 	display: block;
 	text-align: center;
 	text-decoration: none;
-	color: #c2c7cc;
+	color: #8a9199;
 	border: 1px solid #c2c7cc;
 	font-size: 0.75em;
 	height: 38px;
@@ -662,7 +676,7 @@ img {
     line-height: 1em;
 }
 .post-author-bio span {
-	font-family: 'Open Sans', serif;
+	font-family: 'Open Sans', sans-serif;
 	font-weight: 400;
 	color: #8a9199;
 	margin-right: 20px;
