@@ -7,14 +7,14 @@
 <article class="{{post_class}}">
 	<div class="inner">
 		<header class="post-header">
+			{{#if image}}
+				<figure class="post-image" style="background-image: url('{{image}}');">
+					<a class="js-ajax-link js-show-post" href="{{url}}"><img src="{{image}}" alt="" /></a>
+				</figure>
+			{{/if}}
 			<span class="post-meta">{{author}} {{tags prefix=" on " separator=", "}} | <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time></span>
 			<div class="clear"></div>
 			<h2 class="post-title"><a class="js-ajax-link js-show-post" href="{{url}}">{{{title}}}</a></h2>
-			{{#if image}}
-				<figure class="post-image">
-					<img src="{{image}}" alt="" />
-				</figure>
-			{{/if}}
 		</header>
 
 		<section class="post-excerpt">

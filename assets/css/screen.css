@@ -484,6 +484,19 @@ img {
 #post-index .post.featured {
 	background: #f7f9fa;
 }
+.post-image {
+	height: 0;
+	padding-bottom: 50%;
+	margin: 0 auto 2em;
+	background: no-repeat center center / cover #f7f9fa;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	overflow: hidden;
+}
+.post-image img {
+	visibility: hidden;
+	margin: auto;
+}
 .post-meta {
 	display: block;
 	font-size: 0.75em;
@@ -502,19 +515,12 @@ img {
 .post-title {
 	color: #000;
 	font-size: 2em;
-    line-height: 1.5em;
-	text-indent: -2px;
-	margin: 0 0 0.5em;
+	text-indent: -1px;
+	margin: 0.25em 0 0.75em;
 }
 .post-title a {
 	text-decoration: none;
 	color: inherit;
-}
-.post-image {
-	margin: auto;
-}
-.post-image img {
-	margin: 32px auto;
 }
 .post-excerpt p {
 	margin: auto;
@@ -709,6 +715,9 @@ img {
 	}
 	#main-nav a {
 		margin: 16px;
+	}
+	.post {
+		padding: 60px 0;
 	}
 	.post-footer > .post-share,
 	.post-footer > .post-meta {
