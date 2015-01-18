@@ -266,8 +266,8 @@ img {
     background-color: #292e33;
 	text-align: center;
 	z-index: 30;
-	min-height: 4em;
-	padding: 100px 0;
+	min-height: 6em;
+	padding: 7em 0 5em;
 
 	-webkit-transition: all cubic-bezier(0.23, 1, 0.32, 1) 0.666s;
 	transition: all cubic-bezier(0.23, 1, 0.32, 1) 0.666s;
@@ -362,44 +362,38 @@ img {
 	max-width: 20em;
 	max-height: 4em;
 }
-#blog-logo-title {
+.page-title,
+#blog-name {
 	display: inline-block;
-	line-height: 1.6em;
-	font-size: 1em;
+	line-height: 1em;
+	font-size: 3em;
 	text-align: center;
 	text-decoration: none;
 	color: #fff;
 	padding: 0;
 	margin: 0;
 }
-.blog-description {
+#blog-name a {
+	color: #fff;
+	text-decoration: none;
+	font-weight: inherit;
+}
+#blog-description {
 	display: block;
 	text-align: center;
 	margin: 20px auto -10px;
-	line-height: 20px;
-}
-.page-title {
-	position: relative;
-	font-size: 2em;
-	line-height: 1em;
-	margin: 0;
-	padding: 0;
 	color: #fff;
-	z-index: 10;
-
-	-webkit-animation: 1s ease 0s normal none 1 fadeUp;
-	animation: 1s ease 0s normal none 1 fadeUp;
+	position: relative
 }
-#page-title {
-	display: inline-block;
-	line-height: 1.6em;
-	font-size: 1em;
-	text-align: center;
-	text-decoration: none;
-	color: #fff;
-	padding: 0 0.6em;
-	margin: 0;
-	border: #fff 0.166em solid;
+#blog-description:after {
+	content: '';
+	position: absolute;
+	height: 1px;
+	width: 100px;
+	margin-left: -50px;
+	left: 50%;
+	top: -10px;
+	background: #fff;
 }
 #wrapper {
 	position: relative;
