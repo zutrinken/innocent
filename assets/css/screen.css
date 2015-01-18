@@ -42,9 +42,7 @@ html {
 }
 
 body {
-	font-family: 'Rambla', sans-serif;
-	font-size: 2em;
-	line-height: 1.5em;
+	font: 300 2em / 1.5em 'Merriweather', serif;
 	
 	color: #5c5f66;
 }
@@ -56,8 +54,9 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
+	font: 400 2em / 1.5em 'Abril Fatface', serif;
 	text-rendering: optimizeLegibility;
-	color: #41454d;
+	color: #212226;
 }
 h1 {
 	font-size: 2em;
@@ -82,14 +81,18 @@ h4 {
 	margin: 40px 0 20px;
 }
 a {
-	color: inherit;
-	text-decoration: underline;
+	color: #212226;
+	text-decoration: none;
+	font-weight: 400;
 	-webkit-transition: all ease-out 0.25s;
 	transition: all ease-out 0.25s;
 }
 a:hover,
 a:focus {
 	color: #000;
+}
+.post-content a {
+	border-bottom: 1px solid #d8dfe5;
 }
 
 p, ul, ol {
@@ -291,6 +294,7 @@ img {
 	left: 0;
 	width: 100%;
 	z-index: 5;
+	font-family: 'Open Sans', serif;
 }
 #main-nav a {
 	text-decoration: none;
@@ -364,6 +368,9 @@ img {
 }
 .page-title,
 #blog-name {
+	font-family: 'Open Sans', serif;
+	font-weight: 700;
+	letter-spacing: -1px;
 	display: inline-block;
 	line-height: 1em;
 	font-size: 3em;
@@ -399,6 +406,8 @@ img {
 	position: relative;
 }
 #site-footer {
+	font-size: 0.75em;
+	line-height: 1.333em;
 	position: relative;
 	background: #f7f9fa;
 	color: #8a9199;
@@ -474,6 +483,7 @@ img {
 	font-size: 0.75em;
 	line-height: 1.333em;
 	color: #c2c7cc;
+	font-family: 'Open Sans', serif;
 }
 .post-meta a {
 	color: #8a9199;
@@ -513,6 +523,7 @@ img {
 	margin: 0;
 	padding: 40px 0;
 	position: relative;
+	font-family: 'Open Sans', serif;
 }
 .pagination:after {
 	content: '';
@@ -559,7 +570,6 @@ img {
 	padding: 18px 0;
 	border-top: 1px solid #d8dfe5;
 	border-bottom: 1px solid #d8dfe5;
-	height: 1em;
 	overflow: hidden;
 }
 .post-footer > .post-meta {
@@ -626,6 +636,7 @@ img {
     line-height: 1em;
 }
 .post-author-bio span {
+	font-family: 'Open Sans', serif;
 	font-weight: 400;
 	color: #8a9199;
 	margin-right: 20px;
@@ -678,9 +689,6 @@ img {
 	}
 	#main-nav a {
 		margin: 16px;
-	}
-	.post-footer {
-		height: auto;
 	}
 	.post-footer > .post-share,
 	.post-footer > .post-meta {
