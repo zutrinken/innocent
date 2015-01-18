@@ -294,18 +294,18 @@ img {
 }
 #main-nav a {
 	text-decoration: none;
-	font-size: 16px;
+	font-size: 0.75em;
 	display: block;
 	color: #fff;
 	margin: 20px;
-	border: 2px solid #fff;
-	height: 36px;
-	line-height: 36px;
-	padding: 0 10px;
-	
+	border: 1px solid #fff;
+	height: 38px;
+	line-height: 38px;
+	padding: 0 15px;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
 	-webkit-transition: none;
 	transition: none;
-
 	-webkit-animation: 1s ease 0s normal none 1 fadeIn;
 	animation: 1s ease 0s normal none 1 fadeIn;
 }
@@ -528,11 +528,15 @@ img {
 	text-align: center;
 	text-decoration: none;
 	color: #c2c7cc;
-	border: 2px solid #c2c7cc;
-	line-height: 36px;
-	padding: 0 0.5em;
+	border: 1px solid #c2c7cc;
+	font-size: 0.75em;
+	height: 38px;
+	line-height: 38px;
+	padding: 0 15px;
 	transition: all ease 0.3s;
 	-webkit-transition: all ease 0.3s;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
 }
 .older-posts {
 	float: right;
