@@ -515,9 +515,8 @@ img {
 .post-title {
 	color: #000;
 	font-size: 2em;
-    line-height: 1.5em;
-	text-indent: -2px;
-	margin: 0 0 0.5em;
+	text-indent: -1px;
+	margin: 0.25em 0 0.75em;
 }
 .post-title a {
 	text-decoration: none;
