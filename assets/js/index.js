@@ -37,11 +37,21 @@ jQuery(function($) {
 			});
 			$('.pagination a').each(function() {
 				var link = $(this);
-				if (link.attr('href').length < 2 ) {
-					link.addClass('js-show-index js-ajax-link');
-				} else {
+				if (link.attr('href').indexOf('page') > -1 ) {
 					link.addClass('js-archive-index js-ajax-link');
-				}				
+					if (link.attr('href').indexOf('tag') > -1) {
+						link.addClass('js-tag-index');
+					} else if (link.attr('href').indexOf('author') > -1) {
+						link.addClass('js-author-index');
+					}
+				} else {
+					link.addClass('js-show-index js-ajax-link');
+					if (link.attr('href').indexOf('tag') > -1) {
+						link.addClass('js-tag-index');
+					} else if (link.attr('href').indexOf('author') > -1) {
+						link.addClass('js-author-index');
+					}
+				}
 			});
 		}
 		ajaxLinkClass();
@@ -95,27 +105,47 @@ jQuery(function($) {
                 loading = true;
                 var link = $(this);
                 if (link.hasClass('js-show-post')) {
+	                
                 	body.removeClass();
 					body.addClass('post-template');
+					
 				} else if(link.hasClass('js-show-page')) {
+					
                 	body.removeClass();
 					body.addClass('page-template').addClass('post-template');
-				} else if(link.hasClass('js-show-index')) {
-                	body.removeClass();
-					body.addClass('home-template');
+					
 				} else if(link.hasClass('js-tag-index')) {
+                	
                 	body.removeClass();
 					body.addClass('tag-template');
 					var tag = link.attr('href').match(/\/tag\/([^\/]+)/)[1];
 					body.addClass('tag-' + tag);
+					
+					if(link.hasClass('js-archive-index')) {
+						body.addClass('paged archive-template');
+					}
+					
 				} else if(link.hasClass('js-author-index')) {
+					
                 	body.removeClass();
 					body.addClass('author-template');
 					var author = link.attr('href').match(/\/author\/([^\/]+)/)[1];
 					body.addClass('author-' + author);
+					
+					if(link.hasClass('js-archive-index')) {
+						body.addClass('paged archive-template');
+					}
+					
 				} else if(link.hasClass('js-archive-index')) {
+					
                 	body.removeClass();
-					body.addClass('archive-template');
+					body.addClass('paged archive-template');
+				
+				} else if(link.hasClass('js-show-index')) {
+					
+                	body.removeClass();
+					body.addClass('home-template');
+						
 				}
                 NProgress.start();
 
