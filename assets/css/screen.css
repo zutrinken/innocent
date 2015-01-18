@@ -566,6 +566,15 @@ img {
 	color: #292e33;
 	border-color: #292e33;
 }
+.extra-pagination {
+	display: none;
+}
+.extra-pagination .pagination:after {
+	display: none;
+}
+.archive-template .extra-pagination {
+	display: block;
+}
 
 /* ==========================================================================
    5. Post
