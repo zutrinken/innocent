@@ -557,8 +557,8 @@ img {
 .post-footer {
 	margin: 60px 0;
 	padding: 18px 0;
-	border-top: 1px solid #efefef;
-	border-bottom: 1px solid #efefef;
+	border-top: 1px solid #d8dfe5;
+	border-bottom: 1px solid #d8dfe5;
 	height: 1em;
 	overflow: hidden;
 }
@@ -583,6 +583,7 @@ img {
 	float: left;
 	border-radius: 2px;
 	transition: all ease 0.3s;
+	-webkit-transition: all ease 0.3s;
 }
 .post-share > a:hover,
 .post-share > a:focus {
@@ -641,7 +642,10 @@ img {
 }
 .post-comments {
 	padding: 1em;
-	background-color: #efefef;
+	background-color: #f7f9fa;
+	border: 1px solid #d8dfe5;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
 }
 
 
