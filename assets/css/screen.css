@@ -372,6 +372,12 @@ img {
 	padding: 0;
 	margin: 0;
 }
+.blog-description {
+	display: block;
+	text-align: center;
+	margin: 20px auto -10px;
+	line-height: 20px;
+}
 .page-title {
 	position: relative;
 	font-size: 2em;
@@ -417,17 +423,22 @@ img {
 	color: inherit;
 	font-weight: 700;
 }
-.blog-description {
-	display: block;
-	text-align: center;
-	margin: 20px auto -10px;
-}
-.poweredby {
-	margin: 20px auto;
+.credits {
 	text-align: center;
 	font-size: 0.75em;
 	line-height: 1.333em;
 	color: #c2c7cc;
+	padding: 20px;
+	overflow: auto;
+}
+.credits span {
+	display: block;
+}
+.credits-theme {
+	float: left;
+}
+.credits-software {
+	float: right;
 }
 
 
@@ -640,7 +651,13 @@ img {
    6. Media Queries - Smaller than 640px
    ========================================================================== */
 
-@media only screen and (max-width: 640px) {}
+@media only screen and (max-width: 640px) {
+	.credits span {
+		display: inline;
+		margin: auto;
+		float: none;
+	}
+}
 
 /* ==========================================================================
    7. Media Queries - Smaller than 480px

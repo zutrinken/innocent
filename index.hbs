@@ -11,6 +11,7 @@
 		{{else}}
 			<h1 class="page-title"><a class="js-ajax-link js-show-index" id="page-title" href="{{@blog.url}}">{{@blog.title}}</a></h1>
 		{{/if}}
+		{{#if @blog.description}}<span class="blog-description">{{@blog.description}}</span>{{/if}}
 	</div>
 	{{#if @blog.cover}}
 		<div class="site-cover" style="background-image: url({{@blog.cover}})"></div>
