@@ -29,28 +29,32 @@ jQuery(function($) {
 		function ajaxLinkClass() {
 			$('.post-meta a').each(function() {
 				var link = $(this);
+				link.addClass('js-ajax-link');
+				
 				if (link.attr('href').indexOf('tag') > -1) {
-					link.addClass('js-tag-index js-ajax-link');
-				} else if (link.attr('href').indexOf('author') > -1) {
-					link.addClass('js-author-index js-ajax-link');
+					link.addClass('js-tag-index');
+				}
+				
+				if (link.attr('href').indexOf('author') > -1) {
+					link.addClass('js-author-index');
 				}
 			});
 			$('.pagination a').each(function() {
 				var link = $(this);
+				link.addClass('js-ajax-link');
+				
 				if (link.attr('href').indexOf('page') > -1 ) {
-					link.addClass('js-archive-index js-ajax-link');
-					if (link.attr('href').indexOf('tag') > -1) {
-						link.addClass('js-tag-index');
-					} else if (link.attr('href').indexOf('author') > -1) {
-						link.addClass('js-author-index');
-					}
+					link.addClass('js-archive-index');
 				} else {
-					link.addClass('js-show-index js-ajax-link');
-					if (link.attr('href').indexOf('tag') > -1) {
-						link.addClass('js-tag-index');
-					} else if (link.attr('href').indexOf('author') > -1) {
-						link.addClass('js-author-index');
-					}
+					link.addClass('js-show-index');
+				}
+				
+				if (link.attr('href').indexOf('tag') > -1) {
+					link.addClass('js-tag-index');
+				}
+				
+				if (link.attr('href').indexOf('author') > -1) {
+					link.addClass('js-author-index');
 				}
 			});
 		}
