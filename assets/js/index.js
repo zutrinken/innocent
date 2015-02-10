@@ -91,6 +91,8 @@ jQuery(function($) {
             ajaxContainer.fadeOut(500, function() {
                 document.title = title;
                 ajaxContainer.html($newContent);
+    			body.removeClass();
+    			body.addClass($('#body-class').attr('class'));
                 ajaxContainer.fadeIn(500);
                 NProgress.done();
                 reload();
@@ -107,55 +109,9 @@ jQuery(function($) {
 
             if (url.replace(/\/$/, "") !== currentState.url.replace(/\/$/, "")) {
                 loading = true;
-                var link = $(this);
-                if (link.hasClass('js-show-post')) {
-	                
-                	body.removeClass();
-					body.addClass('post-template');
-					
-				} else if(link.hasClass('js-show-page')) {
-					
-                	body.removeClass();
-					body.addClass('page-template').addClass('post-template');
-					
-				} else if(link.hasClass('js-tag-index')) {
-                	
-                	body.removeClass();
-					body.addClass('tag-template');
-					var tag = link.attr('href').match(/\/tag\/([^\/]+)/)[1];
-					body.addClass('tag-' + tag);
-					
-					if(link.hasClass('js-archive-index')) {
-						body.addClass('paged archive-template');
-					}
-					
-				} else if(link.hasClass('js-author-index')) {
-					
-                	body.removeClass();
-					body.addClass('author-template');
-					var author = link.attr('href').match(/\/author\/([^\/]+)/)[1];
-					body.addClass('author-' + author);
-					
-					if(link.hasClass('js-archive-index')) {
-						body.addClass('paged archive-template');
-					}
-					
-				} else if(link.hasClass('js-archive-index')) {
-					
-                	body.removeClass();
-					body.addClass('paged archive-template');
-				
-				} else if(link.hasClass('js-show-index')) {
-					
-                	body.removeClass();
-					body.addClass('home-template');
-						
-				}
                 NProgress.start();
-
                 History.pushState({}, title, url);
             }
         }
     });
-
 });
