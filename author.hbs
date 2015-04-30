@@ -4,11 +4,11 @@
 
 <header id="main-header">
 	<nav id="main-nav">
-		<span id="home-link"><a class="js-ajax-link js-show-index" href="{{@blog.url}}"><i class="fa fa-angle-left"></i> Home</a></span>
-		<span id="rss-link"><a class="subscribe" href="{{@blog.url}}/author/{{name}}/rss/"><i class="fa fa-rss"></i> {{name}}</a></span>
+		<span id="home-link"><a class="js-ajax-link js-show-index" href="{{@blog.url}}"><i class="icon-arrow-left"></i> Home</a></span>
+		<span id="rss-link"><a class="subscribe" href="{{@blog.url}}/author/{{name}}/rss/"><i class="icon-rss"></i> {{name}}</a></span>
 	</nav>
-	<div class="inner">
-		<h1 class="page-title">{{name}}</h1>
+	<div class="site-title">
+		<h1 class="site-name">{{name}}</h1>
 	</div>
 	{{#if @blog.cover}}
 		<div class="site-cover" style="background-image: url({{@blog.cover}})"></div>
