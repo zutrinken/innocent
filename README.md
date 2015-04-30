@@ -1,6 +1,6 @@
 # Innocent
 
-Innocent is a simple AJAX driven theme for [Ghost](http://github.com/tryghost/ghost/) by [Peter Amende](http://zutrinken.com/). View a demo of Innocent on my blog [shithub.cc](http://shithub.cc/).
+Innocent is a simple AJAX driven theme for [Ghost](http://github.com/tryghost/ghost/) by [Peter Amende](http://zutrinken.com/). View a demo of Innocent [here](http://ghost-dev1.zutrinken.com/).
 
 ## Support
 
