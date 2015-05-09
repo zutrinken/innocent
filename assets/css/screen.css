@@ -656,13 +656,13 @@ img {
 .post-share > a:focus {
 	background-color: #404040;
 }
-.fa-twitter {
+.icon-twitter {
 	background-color: #3ea9dd;
 }
-.fa-facebook {
+.icon-facebook {
 	background-color: #3c5a98;
 }
-.fa-google-plus {
+.icon-gplus {
 	background-color: #d14836;
 }
 .post-author {
