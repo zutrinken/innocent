@@ -632,6 +632,7 @@ img {
 .post-footer > .post-meta {
 	float: left;
 	margin-bottom: 0;
+	max-width: 75%;
 }
 .post-share {
 	float: right;
@@ -754,6 +755,7 @@ img {
 	.post-footer > .post-meta {
 	    float: none;
 	    font-size: 1em;
+	    max-width: none;
 	}
 	.post-footer > .post-share > * {
 		margin: 1em 1em 1em 0;
