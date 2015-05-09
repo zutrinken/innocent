@@ -632,6 +632,7 @@ img {
 .post-footer > .post-meta {
 	float: left;
 	margin-bottom: 0;
+	max-width: 75%;
 }
 .post-share {
 	float: right;
@@ -656,13 +657,13 @@ img {
 .post-share > a:focus {
 	background-color: #404040;
 }
-.fa-twitter {
+.icon-twitter {
 	background-color: #3ea9dd;
 }
-.fa-facebook {
+.icon-facebook {
 	background-color: #3c5a98;
 }
-.fa-google-plus {
+.icon-gplus {
 	background-color: #d14836;
 }
 .post-share > iframe {
@@ -759,6 +760,7 @@ img {
 	.post-footer > .post-meta {
 	    float: none;
 	    font-size: 1em;
+	    max-width: none;
 	}
 	.post-footer > .post-share > * {
 		margin: 1em 1em 1em 0;
