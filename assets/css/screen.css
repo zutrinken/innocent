@@ -277,16 +277,18 @@ img {
 
 #main-header {
 	position: relative;
-    background-color: #292e33;
 	text-align: center;
 	z-index: 30;
-	height: 240px;
-
+	height: 12em;
+	
 	-webkit-transition: all ease 0.5s;
 	transition: all ease 0.5s;
 	
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
+}
+#main-header.has-cover {
+	background-color: #292e33;
 }
 .home-template #main-header {
 	height: 62.5vh;
@@ -340,9 +342,9 @@ img {
 	text-decoration: none;
 	font-size: 0.75em;
 	display: block;
-	color: #fff;
+	color: #8a9199;
 	margin: 20px;
-	border: 1px solid #fff;
+	border: 1px solid #c2c7cc;
 	height: 38px;
 	line-height: 38px;
 	padding: 0 15px;
@@ -351,14 +353,19 @@ img {
 	-webkit-transition: all ease 0.3s;
 	transition: all ease 0.3s;
 }
-.post-template #main-nav a {
-	color: #8a9199;
-	border-color: #c2c7cc;
-}
-.post-template #main-nav a:hover,
-.post-template #main-nav a:focus {
+#main-nav a:hover,
+#main-nav a:focus {
 	color: #292e33;
 	border-color: #292e33;
+}
+.has-cover #main-nav a {
+	color: rgba(255,255,255,0.75);
+	border-color: rgba(255,255,255,0.5);
+}
+.has-cover #main-nav a:hover,
+.has-cover #main-nav a:focus {
+	color: rgba(255,255,255,1);
+	border-color: rgba(255,255,255,0.75);
 }
 .site-title {
 	position: relative;
@@ -373,8 +380,8 @@ img {
 }
 .site-logo img {
 	display: block;
-	margin: 0 auto;
-	padding: 1em;
+	margin: 0 auto 1em;
+	padding: 0;
 	max-width: 20em;
 	max-height: 4em;
 }
@@ -384,19 +391,28 @@ img {
 	letter-spacing: -1px;
 	display: inline-block;
 	line-height: 1em;
-	font-size: 3em;
+	font-size: 2em;
 	text-align: center;
 	text-decoration: none;
-	color: #fff;
+	color: #212226;
 	padding: 0;
 	margin: 0;
+}
+.home-template .site-name {
+	font-size: 3em;
+}
+.has-cover .site-name {
+	color: #fff;
 }
 .site-description {
 	display: block;
 	text-align: center;
 	margin: 20px auto -10px;
-	color: #fff;
+	color: #8a9199;
 	position: relative
+}
+.has-cover .site-description {
+	color: #fff;
 }
 .site-description:after {
 	content: '';
@@ -406,6 +422,9 @@ img {
 	margin-left: -50px;
 	left: 50%;
 	top: -10px;
+	background: #d8dfe5;
+}
+.has-cover .site-description:after {
 	background: #fff;
 }
 .site-cover {
