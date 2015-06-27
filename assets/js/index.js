@@ -74,44 +74,46 @@ jQuery(function($) {
 	   Ajax Loading based on Ghostwriter by Rory Gibson - https://github.com/roryg/ghostwriter
 	   ========================================================================== */
 
-    var History = window.History;
-    var loading = false;
-    var ajaxContainer = $('#ajax-container');
-
-    if (!History.enabled) {
-    	return false;
-    }
-    History.Adapter.bind(window, 'statechange', function() {
-        var State = History.getState();
-        $.get(State.url, function(result) {
-            var $html = $(result);
-            var $newContent = $('#ajax-container', $html).contents();
-            var title = result.match(/<title>(.*?)<\/title>/)[1];
-
-            ajaxContainer.fadeOut(500, function() {
-                document.title = title;
-                ajaxContainer.html($newContent);
-    			body.removeClass();
-    			body.addClass($('#body-class').attr('class'));
-                ajaxContainer.fadeIn(500);
-                NProgress.done();
-                reload();
-                loading = false;
-            });
-        });
-    });
-    $('body').on('click', '.js-ajax-link', function(e) {
-        e.preventDefault(); 
-        if (loading === false) {
-            var currentState = History.getState();
-            var url = $(this).prop('href');
-            var title = $(this).attr('title') || null;
-
-            if (url.replace(/\/$/, "") !== currentState.url.replace(/\/$/, "")) {
-                loading = true;
-                NProgress.start();
-                History.pushState({}, title, url);
-            }
-        }
-    });
+	var History = window.History;
+	var loading = false;
+	var ajaxContainer = $('#ajax-container');
+	
+	if (!History.enabled) {
+		return false;
+	}
+	History.Adapter.bind(window, 'statechange', function() {
+		var State = History.getState();
+		$.get(State.url, function(result) {
+			var $html = $(result);
+			var newContent = $('#ajax-container', $html).contents();
+			var title = result.match(/<title>(.*?)<\/title>/)[1];
+			
+			ajaxContainer.fadeOut(500, function() {
+				document.title = title;
+				ajaxContainer.html(newContent);
+				body.removeClass();
+				body.addClass($('#body-class').attr('class'));
+				$('html').removeClass('loading');
+				NProgress.done();
+				reload();
+				loading = false;
+				ajaxContainer.fadeIn(500);
+			});
+		});
+	});
+	$('body').on('click', '.js-ajax-link', function(e) {
+	    e.preventDefault(); 
+	    if (loading === false) {
+			var currentState = History.getState();
+			var url = $(this).prop('href');
+			var title = $(this).attr('title') || null;
+	
+	        if (url.replace(/\/$/, "") !== currentState.url.replace(/\/$/, "")) {
+				loading = true;
+				$('html').addClass('loading');
+				NProgress.start();
+				History.pushState({}, title, url);
+	        }
+	    }
+	});
 });
