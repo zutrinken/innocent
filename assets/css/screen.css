@@ -26,16 +26,6 @@
    1. Basics
    ========================================================================== */
 
-@supports (flex-wrap: wrap) {
-    body {
-    	display: flex;
-		flex-direction: column;
-		min-height: 100vh;
-    }
-	#wrapper {
-		flex: 1;
-	}
-}
 
 html {
     font-size: 62.5%;
@@ -43,7 +33,6 @@ html {
 
 body {
 	font: 300 2em / 1.5em 'Merriweather', serif;
-	
 	color: #5c5f66;
 }
 
@@ -441,11 +430,18 @@ img {
 
 #wrapper {
 	position: relative;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	min-height: 100vh;
+	padding-bottom: 3em;
 }
 #footer {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	bottom: 0;
 	font-size: 0.75em;
 	line-height: 1.333em;
-	position: relative;
 	background: #f7f9fa;
 	color: #8a9199;
 	z-index: 20;
