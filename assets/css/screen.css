@@ -67,26 +67,26 @@ h1 {
 	font-size: 2em;
 	line-height: 1em;
 	text-indent: -1px;
-	margin: 60px 0 20px;
+	margin: 60px auto 40px;
 }
 
 h2 {
 	font-size: 1.75em;
 	line-height: 1.111em;
 	text-indent: -1px;
-	margin: 50px 0 20px;
+	margin: 60px auto 40px;
 }
 
 h3 {
 	font-size: 1.5em;
 	line-height: 1.333em;
-	margin: 40px 0 20px;
+    margin: 40px auto;
 }
 
 h4 {
 	font-size: 1.25em;
 	line-height: 1.2em;
-	margin: 40px 0 20px;
+    margin: 40px auto;
 }
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -94,11 +94,11 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 }
 
 p, ul, ol {
-    margin: 20px auto;
+    margin: 40px auto;
 }
 
 ol ol, ul ul, ul ol, ol ul {
-    margin: 0.5em 0;
+    margin: 40px auto;
 }
 
 hr {
@@ -106,7 +106,7 @@ hr {
     height: 1px;
     border: 0;
     border-top: 1px solid #d8dfe5;
-    margin: 32px 0;
+    margin: 40px auto;
     padding: 0;
 }
 
@@ -128,7 +128,7 @@ small {
 
 
 dl {
-    margin: 20px 0;
+    margin: 40px auto;
 }
 dl dt {
     float: left;
@@ -205,7 +205,7 @@ kbd {
 table {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    margin: 2em 0;
+    margin: 40px auto;
     width:100%;
     max-width: 100%;
     background-color: transparent;
