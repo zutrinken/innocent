@@ -3,6 +3,7 @@
 <header id="main-header"{{#if @blog.cover}} class="has-cover"{{/if}}>
 	<nav id="main-nav">
 		<span id="rss-link"><a class="subscribe" href="{{@blog.url}}/rss/"><i class="icon-rss"></i> RSS</a></span>
+		{{navigation}}
 	</nav>
 	<a class="site-title" class="js-ajax-link js-show-index" href="{{@blog.url}}">
 		{{#if @blog.logo}}
