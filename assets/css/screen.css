@@ -307,6 +307,9 @@ img {
 #main-nav #rss-link {
 	float: right;
 }
+#main-nav #nav-link {
+	float: right;
+}
 @-webkit-keyframes fadeIn {
 	0% {
 		opacity: 0;
