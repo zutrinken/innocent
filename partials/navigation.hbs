@@ -1,3 +1,3 @@
 {{#foreach navigation}}
-<span id="nav-link" class="nav-{{slug}}{{#if current}} nav-current{{/if}}" role="presentation"><a href="{{url absolute="true"}}">{{label}}</a></span>
+<a class="{{slug}}{{#if current}} current{{/if}}" href="{{url absolute="true"}}">{{label}}</a>
 {{/foreach}}

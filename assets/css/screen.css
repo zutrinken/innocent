@@ -303,12 +303,11 @@ img {
 }
 #main-nav #home-link {
 	float: left;
-}
-#main-nav #rss-link {
-	float: right;
+	padding: 15px 0 0 15px;
 }
 #main-nav #nav-link {
 	float: right;
+	padding: 15px 15px 0 0;
 }
 @-webkit-keyframes fadeIn {
 	0% {
@@ -333,9 +332,9 @@ img {
 #main-nav a {
 	text-decoration: none;
 	font-size: 0.75em;
-	display: block;
+	display: inline-block;
 	color: #8a9199;
-	margin: 20px;
+	margin: 5px;
 	border: 1px solid #c2c7cc;
 	height: 38px;
 	line-height: 38px;
@@ -756,7 +755,12 @@ img {
 		padding: 16px 0;
 	}
 	#main-nav a {
-		margin: 16px;
+		padding: 0 10px;
+	}
+	.site-title {
+		position: relative;
+		-webkit-transform: translate3d(0,0,0);
+		transform: translate3d(0,0,0);
 	}
 	.post {
 		padding: 60px 0;

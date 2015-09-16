@@ -3,8 +3,10 @@
 <header id="main-header"{{#if @blog.cover}} class="has-cover"{{/if}}>
 	<nav id="main-nav">
 		<span id="home-link"><a class="js-ajax-link js-show-index" href="{{@blog.url}}"><i class="icon-arrow-left"></i> Home</a></span>
-		<span id="rss-link"><a class="subscribe" href="{{@blog.url}}/tag/{{tag.slug}}/rss/"><i class="icon-rss"></i> {{tag.name}}</a></span>
-		{{navigation}}
+		<span id="nav-link">
+			{{navigation}}
+			<a class="subscribe" href="{{@blog.url}}/tag/{{tag.slug}}/rss/"><i class="icon-rss"></i> {{tag.name}}</a>
+		</span>
 	</nav>
 	<div class="site-title">
 		<h1 class="site-name">{{tag.name}}</h1>
