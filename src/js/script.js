@@ -25,36 +25,27 @@ jQuery(function($) {
 	/* ==========================================================================
 	   Add class for ajax loading
 	   ========================================================================== */
-		
+
 		function ajaxLinkClass() {
-			$('.post-meta a').each(function() {
+			$('[href^="' + window.location.href + '"], .post-meta a, .pagination a').each(function() {
 				var link = $(this);
-				link.addClass('js-ajax-link');
 				
-				if (link.attr('href').indexOf('tag') > -1) {
-					link.addClass('js-tag-index');
-				}
-				
-				if (link.attr('href').indexOf('author') > -1) {
-					link.addClass('js-author-index');
-				}
-			});
-			$('.pagination a').each(function() {
-				var link = $(this);
-				link.addClass('js-ajax-link');
-				
-				if (link.attr('href').indexOf('page') > -1 ) {
-					link.addClass('js-archive-index');
-				} else {
-					link.addClass('js-show-index');
-				}
-				
-				if (link.attr('href').indexOf('tag') > -1) {
-					link.addClass('js-tag-index');
-				}
-				
-				if (link.attr('href').indexOf('author') > -1) {
-					link.addClass('js-author-index');
+				if(!link.hasClass('subscribe')) {
+					link.addClass('js-ajax-link');
+					
+					if (link.attr('href').indexOf('page') > -1 ) {
+						link.addClass('js-archive-index');
+					} else {
+						link.addClass('js-show-index');
+					}
+					
+					if (link.attr('href').indexOf('tag') > -1) {
+						link.addClass('js-tag-index');
+					}
+					
+					if (link.attr('href').indexOf('author') > -1) {
+						link.addClass('js-author-index');
+					}
 				}
 			});
 		}
