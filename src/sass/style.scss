@@ -164,10 +164,10 @@ pre code, tt {
 	line-height: 2em;
 	white-space: -moz-pre-wrap;
 	white-space: pre-wrap;
-	background: transparent;
-	border: none;
-	padding: 0;
 	vertical-align: inherit;
+	border: none;
+	padding: 0 !important;
+	background: transparent !important;
 }
 
 kbd {
