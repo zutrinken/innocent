@@ -61,6 +61,26 @@ jQuery(function($) {
 		ajaxLinkClass();
 		
 	/* ==========================================================================
+	   Initialize and load Disqus
+	   ========================================================================== */
+	
+	function comments() {
+		if (typeof disqus === 'undefined') {
+			$('.post-comments').css({
+				'display' : 'none'
+			});
+		} else {
+			$.ajax({
+				type: "GET",
+				url: "//" + disqus + ".disqus.com/embed.js",
+				dataType: "script",
+				cache: true
+			});
+		}
+	}
+	comments();
+		
+	/* ==========================================================================
 	   Reload all scripts after AJAX load
 	   ========================================================================== */
 		
@@ -68,6 +88,7 @@ jQuery(function($) {
 			ajaxLinkClass();
 			highlight();
 			video();
+			comments();
 		}
 
 	/* ==========================================================================

@@ -8,6 +8,10 @@ Innocent is a simple AJAX driven theme for [Ghost](http://github.com/tryghost/gh
 * [Post](http://ghost-dev1.zutrinken.com/demo/)
 * [Archive](http://ghost-dev1.zutrinken.com/tag/general/page/2/)
 
+## Setup
+
+To enable [Disqus](https://disqus.com/) comments go to your blogs code injection settings and add `<script>var disqus = ‚YOUR_DISQUS_SHORTNAME‘;</script>` to your blog header.
+
 ## Development
 
 Install [Grunt](http://gruntjs.com/getting-started/):
