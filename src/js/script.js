@@ -123,6 +123,7 @@ jQuery(function($) {
 		});
 	});
 	$('body').on('click', '.js-ajax-link', function(e) {
+		
 	    e.preventDefault(); 
 	    if (loading === false) {
 			var currentState = History.getState();

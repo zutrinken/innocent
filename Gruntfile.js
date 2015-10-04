@@ -17,7 +17,8 @@ module.exports = function(grunt) {
 				'bower_components/nprogress/nprogress.js'
 			],
 			'jsDependenciesInitial': [
-				'bower_components/jquery/dist/jquery.min.js'
+				'bower_components/jquery/dist/jquery.min.js',
+				'bower_components/history.js/scripts/bundled/html4+html5/jquery.history.js'
 			],
 			'cssDependencies': [
 				'bower_components/normalize.css/normalize.css',

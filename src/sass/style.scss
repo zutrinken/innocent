@@ -4,6 +4,11 @@
 
 @import "icons";
 
+
+
+$breakpoint-phone:		480px;
+$breakpoint-tablet:		720px;
+
 /* ==========================================================================
    Basics
    ========================================================================== */
@@ -249,21 +254,22 @@ img {
 #main-header {
 	position: relative;
 	text-align: center;
+	padding: 40px 0;
 	z-index: 30;
-	height: 12em;
 	
 	-webkit-transition: all ease 0.5s;
 	transition: all ease 0.5s;
 	
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
-}
-#main-header.has-cover {
-	background-color: #292e33;
-}
-.home-template #main-header {
-	height: 62.5vh;
-	min-height: 240px;
+	
+	&.has-cover {
+		background-color: #292e33;
+	}
+	
+	@media only screen and (max-width: $breakpoint-tablet) {
+		padding-top: 80px;
+	}
 }
 .post-template #main-header {
 	height: 40px;
@@ -341,11 +347,8 @@ img {
 	border-color: rgba(255,255,255,0.75);
 }
 .site-title {
-	position: relative;
 	display: block;
-	top: 50%;
-	-webkit-transform: translate3d(0,-50%,0);
-	transform: translate3d(0,-50%,0);
+	margin: 20px 0;
 }
 .site-logo {
 	position: relative;
@@ -551,61 +554,76 @@ img {
 	padding: 40px 0;
 	position: relative;
 	font-family: 'Open Sans', sans-serif;
+
+	&:after {
+		content: '';
+		position: absolute;
+		background: #d8dfe5;
+		width: 100%;
+		height: 1px;
+		left: 0;
+		top: 0;
+	}
+	
+	.pagination-prev,
+	.pagination-next {
+		position: relative;
+		display: block;
+		text-align: center;
+		text-decoration: none;
+		color: #8a9199;
+		border: 1px solid #c2c7cc;
+		font-size: 0.75em;
+		height: 38px;
+		line-height: 38px;
+		padding: 0 15px;
+		transition: all ease 0.3s;
+		-webkit-transition: all ease 0.3s;
+		border-radius: 2px;
+		-webkit-border-radius: 2px;
+		z-index: 100;
+		
+		&:hover,
+		&:focus {
+			color: #292e33;
+			border-color: #292e33;
+		}
+		
+		@media only screen and (max-width: $breakpoint-phone) {
+
+			> span {
+				display: none;
+			}
+		}
+	}
+	.pagination-prev {
+		float: right;
+	}
+	.pagination-next {
+		float: left;
+	}
+	
+	.pagination-info {
+		display: block;
+		font-size: 0.75em;
+		height: 40px;
+		left: 0;
+		line-height: 40px;
+		position: absolute;
+		text-align: center;
+		width: 100%;
+		z-index: 50;
+	}
 }
-.pagination:after {
-	content: '';
-	position: absolute;
-	background: #d8dfe5;
-	width: 100%;
-	height: 1px;
-	left: 0;
-	top: 0;
-}
-.pagination a {
-	position: relative;
-	display: block;
-	text-align: center;
-	text-decoration: none;
-	color: #8a9199;
-	border: 1px solid #c2c7cc;
-	font-size: 0.75em;
-	height: 38px;
-	line-height: 38px;
-	padding: 0 15px;
-	transition: all ease 0.3s;
-	-webkit-transition: all ease 0.3s;
-	border-radius: 2px;
-	-webkit-border-radius: 2px;
-	z-index: 100;
-}
-.pagination-prev {
-	float: right;
-}
-.pagination-next {
-	float: left;
-}
-.pagination a:hover,
-.pagination a:focus {
-	color: #292e33;
-	border-color: #292e33;
-}
-.pagination .pagination-info {
-	display: block;
-	font-size: 0.75em;
-	height: 40px;
-	left: 0;
-	line-height: 40px;
-	position: absolute;
-	text-align: center;
-	width: 100%;
-	z-index: 50;
-}
+
 .extra-pagination {
 	display: none;
+	
+	&:after {
+		display: none;
+	}
 }
-.extra-pagination .pagination:after {
-	display: none;
-}
+
 .archive-template .extra-pagination {
 	display: block;
 }
@@ -714,12 +732,7 @@ img {
 	-webkit-border-radius: 2px;
 }
 
-
-/* ==========================================================================
-   Media Queries - Smaller than 640px
-   ========================================================================== */
-
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: $breakpoint-tablet) {
 	.credits span {
 		display: inline;
 		margin: auto;
@@ -727,12 +740,7 @@ img {
 	}
 }
 
-/* ==========================================================================
-   Media Queries - Smaller than 480px
-   ========================================================================== */
-
-
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: $breakpoint-phone) {
 	html {
 	    font-size: 50%;
 	}
@@ -744,11 +752,6 @@ img {
 	}
 	#main-nav a {
 		padding: 0 10px;
-	}
-	.site-title {
-		position: relative;
-		-webkit-transform: translate3d(0,0,0);
-		transform: translate3d(0,0,0);
 	}
 	.post {
 		padding: 60px 0;
@@ -768,10 +771,3 @@ img {
 		margin: -0.25em 0 0 0.5em;
 	}
 }
-
-/* ==========================================================================
-   Media Queries - Smaller than 320px
-   ========================================================================== */
-
-
-@media only screen and (max-width: 320px) {}
