@@ -8,6 +8,32 @@ Innocent is a simple AJAX driven theme for [Ghost](http://github.com/tryghost/gh
 * [Post](http://ghost-dev1.zutrinken.com/demo/)
 * [Archive](http://ghost-dev1.zutrinken.com/tag/general/page/2/)
 
+## Development
+
+Install [Grunt](http://gruntjs.com/getting-started/):
+
+	npm install -g grunt-cli
+	
+Install Grunt modules:
+
+	npm install
+
+Install [Bower](http://bower.io):
+
+	npm install -g bower
+
+Install Bower components:
+
+	bower install
+
+Build Grunt project:
+
+	grunt
+
+Distribute Grunt project:
+
+	grunt build
+
 ## Copyright & License
 
 Copyright (C) 2014-2015 Peter Amende - Released under the MIT License.
