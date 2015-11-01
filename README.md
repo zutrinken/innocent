@@ -4,7 +4,7 @@ Innocent is a simple AJAX driven theme for [Ghost](http://github.com/tryghost/gh
 
 ## Demo
 
-* [Blog](http://http://innocent.zutrinken.com/)
+* [Blog](http://innocent.zutrinken.com/)
 * [Post](http://innocent.zutrinken.com/demo/)
 * [Archive](http://innocent.zutrinken.com/tag/general/page/2/)
 
