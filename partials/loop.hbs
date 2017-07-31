@@ -7,9 +7,9 @@
 <article class="{{post_class}}">
 	<div class="inner">
 		<header class="post-header">
-			{{#if image}}
-				<figure class="post-image" style="background-image: url('{{image}}');">
-					<a class="js-ajax-link js-show-post" href="{{url}}"><img src="{{image}}" alt="" /></a>
+			{{#if feature_image}}
+				<figure class="post-image" style="background-image: url('{{img_url feature_image}}');">
+					<a class="js-ajax-link js-show-post" href="{{url}}"><img src="{{img_url feature_image}}" alt="" /></a>
 				</figure>
 			{{/if}}
 			<span class="post-meta">{{author}} {{tags prefix=" on " separator=", "}} | <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time></span>
