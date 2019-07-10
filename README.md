@@ -1,12 +1,6 @@
-# Innocent
+🚧 __Unmaintained__
 
-Innocent is a simple AJAX driven theme for [Ghost](http://github.com/tryghost/ghost/) by [Peter Amende](http://zutrinken.com/).
-
-## Demo
-
-* [Blog](http://innocent.zutrinken.com/)
-* [Post](http://innocent.zutrinken.com/demo/)
-* [Archive](http://innocent.zutrinken.com/tag/general/page/2/)
+***
 
 ## Setup
 
