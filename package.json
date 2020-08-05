@@ -1,7 +1,7 @@
 {
 	"name": "innocent",
 	"description": "Ghost Theme",
-	"demo": "http://innocent.zutrinken.com",
+	"demo": "https://innocent.zutrinken.com",
 	"version": "1.6.0",
 	"engines": {
 		"ghost": ">=1.0.0"
@@ -13,8 +13,8 @@
 	},
 	"author": {
 		"name": "Peter Amende",
-		"email": "xoxo@zutrinken.com",
-		"url": "http://zutrinken.com"
+		"email": "xoxo@peteramende.de",
+		"url": "https://peteramende.de"
 	},
 	"gpm": {
 		"type": "theme",
